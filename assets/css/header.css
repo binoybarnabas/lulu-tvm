@@ -1,0 +1,22 @@
+.nav-bar-wrapper{
+display: flex;
+}
+
+.nav-bar-wrapper img{
+    width: 10%;
+}
+
+.nav-bar-wrapper-text a{
+    padding: 20px;
+    text-decoration: none;
+    color: black;
+}
+.nav-bar-wrapper a:hover{
+    border-top: solid 3px blue;
+}
+
+
+.nav-bar-wrapper-text{
+    padding-left: 10%;
+    padding-top: 2%;
+}
