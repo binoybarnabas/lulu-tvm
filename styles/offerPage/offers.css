@@ -1,7 +1,7 @@
-.offers{
-    /* margin-right: 20px;
-    margin-left: 20px; */
-}
+/* .offers{
+    margin-right: 20px;
+    margin-left: 20px;
+} */
 .current {
     font-family: "Karla", Sans-serif;
     font-size: 20px;  
@@ -37,7 +37,7 @@ h1{
 }
 img{
     height:400px;
-    width:600px;
+    width:400px;
 }
 h2{
     font-family: "Karla", Sans-serif;
