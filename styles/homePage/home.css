@@ -1,0 +1,150 @@
+/* common features */
+
+.showButton {
+  padding: 14px 20px;
+  background-color: transparent;
+  font-size: 14px;
+  text-decoration-style: bold;
+  font-weight: bold;
+  font-family: "Karla", sans-serif;
+  cursor: pointer;
+}
+
+/* section 1 */
+
+.swiperSlider {
+  width: 100%;
+}
+.scrollContainer {
+  background-color: #333;
+  overflow: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  scroll-snap-type: x mandatory;
+  white-space: nowrap;
+}
+
+.scrollContainer::-webkit-scrollbar {
+  display: none;
+}
+.scrollContainer img {
+  width: 100%;
+  scroll-snap-align: center;
+}
+
+/* section 2 */
+
+.cardContainer {
+  display: flex;
+  position: relative;
+  height: 650px;
+}
+
+.cardContainer img {
+  background-size: cover;
+}
+
+.shopCard {
+  flex: 3;
+  background-image: url(https://www.thiruvananthapuram.lulumall.in/wp-content/uploads/2022/03/lulu-tvm-shopping.jpg);
+  background-position: -170px 0px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #ffffff;
+}
+
+.shopCardDesc {
+  position: absolute;
+  top: 340px;
+  left: 50px;
+}
+
+.shopCard h1 {
+  font-size: 60px;
+  font-weight: bold;
+  font-family: "Karla", sans-serif;
+  margin-bottom: 0;
+}
+
+.shopCard p {
+  font-size: 18px;
+  font-weight: 500;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  font-family: "Karla", sans-serif;
+}
+
+.shopCard button {
+  color: #ffffff;
+  border: 2px solid #ffffff;
+}
+
+.dineCard {
+  flex: 2;
+  background-image: url(https://www.thiruvananthapuram.lulumall.in/wp-content/uploads/2022/03/lulu-tvm-dine.jpg);
+  background-position: bottom right;
+  background-size: contain;
+  background-repeat: no-repeat;
+  color: black;
+}
+
+.dineCardDesc {
+  position: absolute;
+  top: 50px;
+  left: 930px;
+  text-align: center;
+}
+
+.dineCard h1 {
+  font-size: 60px;
+  font-weight: bold;
+  font-family: "Karla", sans-serif;
+  margin-bottom: 0;
+}
+
+.dineCard p {
+  color: #666666;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: "Karla", sans-serif;
+}
+
+.dineCard button {
+  color: black;
+  border: 1px solid black;
+}
+
+/* section 3 */
+
+.entertainmentCard {
+  background-image: url(https://www.thiruvananthapuram.lulumall.in/wp-content/uploads/2022/03/lulu-tvm-trampoline.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  height: 620px;
+}
+
+.entertainmentCardDesc {
+  position: absolute;
+  top: 300px;
+  left: 70px;
+}
+
+.entertainmentCardDesc h1 {
+  margin-top: 0;
+  font-size: 60px;
+  font-weight: bold;
+  font-family: "Karla", sans-serif;
+  margin-bottom: 0;
+}
+
+.entertainmentCardDesc p {
+  color: #666666;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: "Karla", sans-serif;
+}
+
+.entertainmentCardDesc button {
+  color: black;
+  border: 1px solid black;
+}
