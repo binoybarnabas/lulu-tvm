@@ -1,3 +1,7 @@
+.offers{
+    /* margin-right: 20px;
+    margin-left: 20px; */
+}
 .current {
     font-family: "Karla", Sans-serif;
     font-size: 20px;  
@@ -24,10 +28,16 @@ h1{
 .display{
     display: flex;
     flex-wrap: wrap;
+    width:100%;
+    justify-content: space-between;
 }
 .item{
     flex:1;
     text-align: center;
+}
+img{
+    height:400px;
+    width:600px;
 }
 h2{
     font-family: "Karla", Sans-serif;
