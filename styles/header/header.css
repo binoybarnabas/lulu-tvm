@@ -199,6 +199,19 @@
 height: 50%;
 }
 
-.remove{
+.remove {
   color: white;
+  padding-bottom: 27px;
+  margin-bottom: 65px;
+  text-decoration: none;
+}
+
+
+.blue-content-div{
+  padding: 20%;
+
+}
+
+.blueContentDiv{
+  padding-bottom: 8%;
 }
