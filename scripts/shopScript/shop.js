@@ -11,6 +11,7 @@ const getData = async ()=>{
 getData(url);
 
 const createCategory = (category) => {
+    // console.log(category);
     const h2 = document.createElement('h2');
     h2.classList.add('category');
     h2.textContent = category;
@@ -20,6 +21,13 @@ const createCategory = (category) => {
     return h2;
 }
 
-const openCategory = ()=>{
-    window.location.href = ``;
-}
+const openCategory = (category)=>{
+    if(category === 'electronics')
+    window.location.href = `shopElectronics.html?path=${category}`;
+    else if(category === 'jewelery')
+    window.location.href = `shopJewelery.html?path=${category}`;
+    else if(category === 'men\'s clothing')
+    window.location.href = `shopMenClothing.html?path=${category}`;
+    else
+    window.location.href = `shopWomenClothing.html?path=${category}`;
+}   
