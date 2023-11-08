@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+body{
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+.shop-individual{
+    margin-top:20px;
+    display: flex;
+    flex-wrap:wrap;
+    align-items:center;
+    justify-content: center;
+}
+
+.card{
+    flex-basis:70%;
+    margin-top:20px;
+    display: flex;
+    flex-wrap:wrap;
+    border: 2px solid black;
+    border-radius:5px;
+    width:500px;
+    height:inherit;
+    justify-content:left;
+    padding:20px;
+}   
+
+.product-image{
+    flex-basis:30%;
+    height:inherit;
+    width:inherit;
+}
+
+.product-image img{
+   height:inherit;
+   width: 300px;
+   
+}
+
+.product-details{
+    flex-basis:60%;
+    width:100%;
+    height:inherit;
+    margin-left:50px;
+    
+}
+
+.product-details p{
+    text-align: justify;
+}
+
+

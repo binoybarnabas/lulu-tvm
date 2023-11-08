@@ -39,12 +39,14 @@ const createJeweleryCard = (jewelery) =>{
     jeweleryDetails.appendChild(categoryh4);
     card.appendChild(jeweleryDetails);
     card.addEventListener('click',()=>{
-        addEventAndRedirect();
+        addEventAndRedirect(jewelery);
+
     });
 
     return card;
 }
 
-const addEventAndRedirect =()=>{
-    window.location.href = `shopJeweleryIndividual.html?`;
+const addEventAndRedirect =(jewelery)=>{
+    console.log(jewelery);
+    window.location.href = `shopIndividual.html?id=${jewelery.id}&category=${jewelery.category}`;
 }

@@ -38,12 +38,12 @@ const createElectronicCard = (electronic) =>{
     productDetails.appendChild(categoryh4);
     card.appendChild(productDetails);
     card.addEventListener('click',()=>{
-        addEventAndRedirect();
+        addEventAndRedirect(electronic);
     });
 
     return card;
 }
 
-const addEventAndRedirect =()=>{
-    window.location.href = `shopElectronicsIndividual.html?`;
+const addEventAndRedirect =(electronic)=>{
+    window.location.href = `shopIndividual.html?id=${electronic.id}&category=${electronic.category}`;
 }

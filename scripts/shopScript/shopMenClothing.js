@@ -45,12 +45,12 @@ const createMensClothingCard = (mensClothing) =>{
     mensClothingDetails.appendChild(categoryh4);
     card.appendChild(mensClothingDetails);
     card.addEventListener('click',()=>{
-        addEventAndRedirect();
+        addEventAndRedirect(mensClothing);
     });
 
     return card;
 }
 
-const addEventAndRedirect =()=>{
-    window.location.href = `shopJeweleryIndividual.html?`;
+const addEventAndRedirect =(mensClothing)=>{
+    window.location.href = `shopIndividual.html?id=${mensClothing.id}&category=${mensClothing.category}`;
 }

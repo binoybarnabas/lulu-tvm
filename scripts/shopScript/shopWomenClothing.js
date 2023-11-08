@@ -4,7 +4,6 @@ const getData = async(url)=>{
 const response = await fetch(url);
 const data = await response.json();
 console.log(data);
-// console.log(data);
 womensClothingData = data.filter((womensClothing)=>{
     if(womensClothing.category == 'women\'s clothing'){
        return womensClothing
@@ -37,7 +36,6 @@ const createWomensClothingCard = (womensClothing) =>{
     const categoryh4 = document.createElement('h4');
     categoryh4.textContent = womensClothing.category;
 
-
     card.appendChild(womensClothingImage);
     womensClothingImage.appendChild(image);
     womensClothingDetails.appendChild(titleh2);
@@ -45,12 +43,11 @@ const createWomensClothingCard = (womensClothing) =>{
     womensClothingDetails.appendChild(categoryh4);
     card.appendChild(womensClothingDetails);
     card.addEventListener('click',()=>{
-        addEventAndRedirect();
+        addEventAndRedirect(womensClothing);
     });
-
     return card;
 }
 
-const addEventAndRedirect =()=>{
-    window.location.href = `shopJeweleryIndividual.html?`;
+const addEventAndRedirect =(womensClothing)=>{
+    window.location.href = `shopIndividual.html?id=${womensClothing.id}&category=${womensClothing.category}`;
 }
