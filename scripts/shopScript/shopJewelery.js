@@ -3,6 +3,7 @@ let url = 'https://fakestoreapi.com/products/category/jewelery';
 const getData = async(url)=>{
 const response = await fetch(url);
 const data = await response.json();
+
 // console.log(data);
 data.map((jewelery)=>{
 const jewelerySection = document.querySelector('.jewelery');
