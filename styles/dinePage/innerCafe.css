@@ -1,0 +1,85 @@
+.quick-nav {
+    display: inline;
+    margin-left: 2%;
+}
+
+.quick-nav a {
+    text-decoration: none;
+    color: rgb(65, 63, 63);
+    font-size: medium;
+    font-weight: bold;
+}
+
+a:hover {
+    color: rgb(59, 105, 234);
+    cursor: pointer;
+}
+
+.cafe-info {
+    display: flex;
+    margin-top: 50px;
+    margin-left: 10%;
+    margin-bottom: 50px;
+}
+
+.cafe-logo {
+    flex: 2;
+}
+
+#cafe-logo {
+    height: 150px;
+    width: 300px;
+}
+
+.cafe-details {
+    flex: 3;
+    margin-left: 30px;
+}
+
+.cafe-image {
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.cafe-image img {
+    height: 300px;
+    width: 100%;
+}
+
+.cafe-about {
+    line-height: 28px;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 50px;
+}
+
+.cafe-contact {
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 70px;
+}
+
+
+.cafe-similar {
+    background-color: #f8f8f8;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+.similar-image {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.similar-image div {
+    background-color: white;
+}
+
+.similar-image img {
+    width: 250px;
+    height: 150px;
+}
