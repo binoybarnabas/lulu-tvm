@@ -59,4 +59,8 @@ h3{
 }
 p{
     font-size: large;
+    width:60%;
+}
+#h4{
+    font-weight: lighter;
 }

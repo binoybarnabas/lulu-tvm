@@ -21,17 +21,10 @@ document.getElementById('img').src = newData[0].image;
 document.getElementById('h4').innerHTML = newData[0].domain;
 document.getElementById('h1').innerHTML = newData[0].domain;
 document.getElementById('h2').innerHTML = newData[0].company.department;
-document.getElementById('p').innerHTML = newData[0].age;
 document.getElementById('h3').innerHTML = newData[0].birthDate;
+document.getElementById('p').innerHTML = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. ";
 
-// filteredData = newData;
-// document.getElementById('fname').value = filteredData[0].firstName;
-// document.getElementById('pnumber').value = filteredData[0].phone;
-// document.getElementById('email').value = filteredData[0].email;
-// document.getElementById('coverletter').value = filteredData[0].address.address;
-// document.getElementById('date').value = filteredData[0].birthDate;
-// document.getElementById('subject').value = filteredData[0].maidenName;
-// console.log(filteredData);
+
 }
 catch(e){   
     console.log(e); 
