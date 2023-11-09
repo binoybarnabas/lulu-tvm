@@ -1,0 +1,42 @@
+.quick-nav a{
+    text-decoration: none;
+    color: #333333;
+}
+
+.main-image-flex-wrapper{
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    width: 100%;
+}
+#img2{
+    height: 365px;
+    padding-top: 50px;
+    padding-bottom: 40px;
+}
+.card{
+    padding: 20px;
+}
+.home{
+    font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+.entertainment{
+    font-family: "Roboto", Sans-serif;
+    font-weight: 400;
+    color: #7a7a7a;
+}
+
+.main-heading{
+    font-family: "Karla", Sans-serif;
+  font-weight: 600;
+  font-size: 35px;
+  padding-left: 40px;
+  color:#333333;
+}
+
+.discription{
+    color: #7a7a7a;
+  font-family: "Roboto", Sans-serif;
+  font-weight: 400;
+}

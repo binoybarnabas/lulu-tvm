@@ -1,6 +1,7 @@
 .nav-bar-wrapper {
   display: flex;
   padding-left: 2%;
+  padding-bottom: 20px;
 }
 
 .nav-bar-wrapper img {
