@@ -11,25 +11,53 @@
       href="https://fonts.googleapis.com/css2?family=Karla:wght@600&display=swap"
       rel="stylesheet"
     />
-  </head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+</head>
   <body>
     <section class="section1">
-      <div class="swiperSlider">
-        <div class="scrollContainer">
-          <img
-            src="https://www.thiruvananthapuram.lulumall.in/wp-content/uploads/2022/03/young-people-trendy-wear-posing-street.jpeg"
-            alt=""
-          />
-          <img
-            src="https://www.thiruvananthapuram.lulumall.in/wp-content/uploads/2022/03/people-s-emotions-cinema.jpg"
-            alt=""
-          />
-          <img
-            src="https://thiruvananthapuram.lulumall.in/wp-content/uploads/2022/03/this-is-same-shoes.jpg"
-            alt=""
-          />
-        </div>
-      </div>
+      <!-- <div class="swiperSlider"> -->
+        <!-- <div class="scrollContainer"> -->
+            <div class="swiper-container mySwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img
+                      src="https://www.thiruvananthapuram.lulumall.in/wp-content/uploads/2022/03/young-people-trendy-wear-posing-street.jpeg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="swiper-slide">
+                    <img
+                      src="https://www.thiruvananthapuram.lulumall.in/wp-content/uploads/2022/03/people-s-emotions-cinema.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="swiper-slide">
+                    <img
+                      src="https://thiruvananthapuram.lulumall.in/wp-content/uploads/2022/03/this-is-same-shoes.jpg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+              </div>
+              
+        <!-- </div> -->
+      <!-- </div> -->
     </section>
 
     <section class="section2">
@@ -38,14 +66,14 @@
           <div class="shopCardDesc">
             <h1>Shopping</h1>
             <p>The new fashion destination</p>
-            <button class="showButton">VIEW ALL SHOPS</button>
+            <a href=""><button class="showButton">VIEW ALL SHOPS</button></a>
           </div>
         </div>
         <div class="dineCard">
           <div class="dineCardDesc">
             <h1>Dining</h1>
             <p>Cuisines from around the globe</p>
-            <button class="showButton">VIEW ALL SHOPS</button>
+            <a href=""><button class="showButton">VIEW ALL SHOPS</button></a>
           </div>
         </div>
       </div>
@@ -56,14 +84,41 @@
         <div class="entertainmentCardDesc">
             <h1>Entertainment</h1>
             <p>Non-stop thrills. Full of fun.</p>
-            <button class="showButton">VIEW ALL SHOPS</button>
+            <a href=""><button class="showButton">VIEW ALL SHOPS</button></a>
           </div>
         </div>
       </div>
     </section>
 
     <section class="section4">
-        
+        <div class="eventSection">
+            <div class="eventSectionHeading">
+                <div class="eventSectionHeading1"><h1>Event</h1></div>
+                <div class="eventSectionHeading2"><a href=""><button>
+                    <i class='fa-solid fa-book'></i> VIEW ALL</button></a></div>
+            </div>
+            <div class="eventSectionDesc">
+            </div>
+        </div>
     </section>
+
+    <section class="section5">
+        <div class="cinemaCard">
+            <div class="cinemaCardDesc">
+                <h1>Cinemas</h1>
+                <p>A world-class cinematic experience coming soon!</p>
+                <a href=""><button class="b1 showButton">VIEW ALL SHOPS</button></a>
+              </div>
+            </div>
+          </div>
+    </section>
+        <!-- Swiper JS -->
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+        <!-- Initialize Swiper -->
+        <script>
+          
+        </script>
+        <script src="/scripts/homePage/home.js"></script>
   </body>
 </html>
