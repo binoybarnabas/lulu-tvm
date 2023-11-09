@@ -147,8 +147,23 @@ form .user-details .input-box{
   }
 }
 
-.error{
-  border:1px solid red;
+.details a{
+  text-decoration: none;
+  color:#06d6a0;
+}
+
+#error{
+  /* display:none; */
+  /* border:1px solid red; */
+  border-radius:5px;
+  padding-left:13%;
   height:fit-content;
   width:fit-content;
+  color:red;
+  font-size:15px;
+  text-align: center;
+}
+
+.error-field::-webkit-input-placeholder {
+  color: red;
 }
