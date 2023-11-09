@@ -340,3 +340,20 @@ footer h4 {
 .bottom-icons{
   padding-top: 10px;
 }
+
+.Copyright{
+  font-family: "Karla";
+  text-align: left;
+  font-size: 14px;
+  font-weight: normal;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.Copyright a{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  /* font-weight: 600; */
+  text-decoration: none;
+  color: #42495b;
+}
