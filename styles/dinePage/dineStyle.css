@@ -1,0 +1,58 @@
+.dine-section {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.dine-div {
+    flex: 50%;
+    position: relative;
+}
+
+.dine-image {
+    width: 100%;
+    height: 75%;
+}
+
+.a1 {
+    position: absolute;
+    font-family: 'Poppins', sans-serif;
+    font-size: 27px;
+    font-weight: 600;
+    text-decoration: none;
+    color: white;
+    top: 50%;
+    left: 4%;
+}
+
+.a2 {
+    position: absolute;
+    font-family: 'Poppins', sans-serif;
+    font-size: 17px;
+    font-weight: 550;
+    text-decoration: none;
+    color: white;
+    top: 60%;
+    left: 4%;
+}
+
+.a1,
+.a2:hover {
+    cursor: pointer;
+}
+
+.dine-div:hover {
+    filter: brightness(65%);
+    animation-name: imageFading;
+    animation-duration: 1s;
+}
+
+@keyframes imageFading {
+    from {
+        filter: brightness(10%);
+    }
+
+    to {
+        filter: brightness(65%);
+    }
+}
