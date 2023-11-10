@@ -1,0 +1,79 @@
+/* .offers{
+    margin-right: 20px;
+    margin-left: 20px;
+} */
+.current {
+    font-family: "Karla", Sans-serif;
+    font-size: 20px;  
+    font-weight: bold;  
+    padding : 30px;
+}
+
+.current a{
+    color:black;
+    text-decoration: none;
+
+}
+a:hover{
+    color:#007bff;
+}
+
+h1{
+    font-family: "Karla", Sans-serif;
+    font-size: 40px;  
+    font-weight:500;  
+    /* padding-top: 30px; */
+    /* padding : 30px; */
+}
+
+.display{
+    display: flex;
+    flex-wrap: wrap;
+    width:100%;
+    justify-content: space-between;
+}
+
+.card{
+    display: flex;
+    width:46%;
+    border: 2px solid black;
+    margin:10px;
+    border-radius: 5px;
+    padding-right:10px;
+}
+.desc{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-left: 30px;
+    padding-top: 0px;
+    border-left: 2px solid black;
+}
+.icon{
+    display: flex;
+    padding-top: 0px;
+    /* margin-top: 0px; */
+}
+.icon img{
+    height: 30px;
+    width: 30px;
+    padding-top: 15px;
+    padding-right: 10px;
+}
+img{
+    height:200px;
+    width:200px;
+}
+h2{
+    font-family: "Karla", Sans-serif;
+    font-weight: lighter;
+    font-size: 20px;
+    /* padding: 10px; */
+    letter-spacing: 1px;
+}
+h3{
+    font-family: "Karla", Sans-serif;
+    font-weight: bold;
+    font-size: 22px;
+    /* padding: 10px; */
+    letter-spacing: 1px;
+}
