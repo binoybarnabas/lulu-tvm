@@ -37,7 +37,6 @@ cafeCards.appendChild(cafeName);
 
 cafeCards.addEventListener('click',() => {
     openNewPage(userData);
-    console.log("hello event");
     })
     
 return cafeCards;

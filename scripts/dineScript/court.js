@@ -37,12 +37,11 @@ courtCards.appendChild(courtName);
 
 courtCards.addEventListener('click',() => {
     openNewPage(userData);
-    console.log("hello event");
     })
     
 return courtCards;
 }
 
 const openNewPage = (userData)=>{
-    window.location.href = `innerCafe.html?id=${userData.id}`;
+    window.location.href = `innerCourt.html?id=${userData.id}`;
 }

@@ -1,12 +1,13 @@
 .quick-nav {
     display: inline;
-    margin-left: 2%;
+    margin-left: 6%;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
 }
 
 .quick-nav a {
     text-decoration: none;
     color: rgb(65, 63, 63);
-    font-size: medium;
     font-weight: bold;
 }
 
@@ -28,12 +29,25 @@ a:hover {
 
 #cafe-logo {
     height: 150px;
-    width: 300px;
+    width: 250px;
+    background-color: rgb(243, 236, 236);
 }
 
 .cafe-details {
     flex: 3;
-    margin-left: 30px;
+}
+
+.cafe-details h2 {
+    font-size: 22px;
+    font-family: "Karla", Sans-serif;
+    font-weight: 600;
+}
+
+.cafe-details span {
+    color: #42495b;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
 }
 
 .cafe-image {
@@ -42,29 +56,42 @@ a:hover {
 }
 
 .cafe-image img {
-    height: 300px;
     width: 100%;
 }
 
 .cafe-about {
-    line-height: 28px;
+    line-height: 30px;
     margin-left: 10%;
     margin-right: 10%;
     margin-bottom: 50px;
 }
 
+.cafe-about h2 {
+    font-family: "Karla", Sans-serif;
+    font-size: 28px;
+}
+
 .cafe-contact {
-    margin-left: 10%;
+    margin-left: 15%;
     margin-right: 10%;
     margin-bottom: 70px;
 }
 
+.cafe-contact p {
+    font-family: "Karla", Sans-serif;
+    font-size: 14px;
+    line-height: 30px;
+}
 
 .cafe-similar {
     background-color: #f8f8f8;
-    padding-top: 20px;
+    padding-top: 10px;
     padding-bottom: 50px;
     text-align: center;
+}
+
+.similar-store {
+    font-size: 28px
 }
 
 .similar-image {
@@ -76,10 +103,13 @@ a:hover {
 }
 
 .similar-image div {
-    background-color: white;
+    background-color: rgb(243, 236, 236);
 }
 
 .similar-image img {
     width: 250px;
-    height: 150px;
+}
+
+.similar-image div:hover {
+    cursor: pointer;
 }
