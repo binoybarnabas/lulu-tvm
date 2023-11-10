@@ -31,9 +31,24 @@ h1{
     width:100%;
     /* justify-content: center;  */
     padding-left:100px;
+    width:80%;
+    /* justify-content: center;  */
+    padding:20px;
+    padding-left:30px;
+    overflow: hidden;
+    border-radius: 17px;
+    /* background-color: #2b4588; */
+    background-color:#99775C;
+    margin-top: 20px;
+    margin-left: 70px;
+    margin-bottom: 50px;
+    color:  rgb(82, 31, 31);
+    box-shadow: 0px 5px 20px 5px rgba(0,0,0,0.44);
 }
 .image{
     flex:2;
+    border: 3px solid rgb(82, 31, 31);
+    border-radius: 5px;
     /* text-align: center; */
 }
 img{
@@ -42,6 +57,7 @@ img{
 }
 .offer-info{
     flex:3;
+    padding-left: 40px;
 }
 h2{
     font-family: "Karla", Sans-serif;
