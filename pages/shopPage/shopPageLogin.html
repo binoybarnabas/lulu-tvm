@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="../../styles/shopPage/shopPageLogin.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="title">Login</div>
+      <div class="content">
+        <form action="#"    >
+          <div class="user-details">
+            <div class="input-box">
+              <span class="details">username</span>
+              <input
+                type="text"
+                placeholder="Enter your username"
+                id="username"
+                required
+              />
+            </div>
+            <div class="input-box">
+              <span class="details">password</span>
+              <input
+                type="password"
+                placeholder="Enter your password"
+                id="password"
+                required
+              />
+            </div>
+            <div class="button">
+                <button onClick="login()">Login in</button>
+            </div>
+            <div class="sign-in"><a href="shopPageSignup.html"><span class="details">Not having an account? click here to sign up</span></a></div>
+            <span id="error"></span>
+
+        </div>
+        </form>
+      </div>
+    </div>
+    <script src="../../scripts/shopScript/shopPageLogin.js"></script>
+  </body>
+</html>
