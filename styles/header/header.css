@@ -134,6 +134,8 @@
   /* background-color: blue; */
   height: 50px;
   width: 50px;
+  cursor: pointer;
+  display: flex;
 }
 .Hamburger {
   display: inline-block;
@@ -174,6 +176,10 @@
   /* animation: bluec 3s; */
 }
 
+.block {
+  display: none;
+}
+
 @keyframes blueB {
   from {
     width: 0%;
@@ -212,6 +218,14 @@
   font-family: "Roboto", Sans-serif;
   font-size: 18px;
   font-weight: 400;
+}
+.blueContentDiv a {
+  /* padding-bottom: 8%;
+  font-family: "Roboto", Sans-serif;
+  font-size: 18px;
+  font-weight: 400; */
+  text-decoration: none;
+  color: white;
 }
 
 .social-icons {
@@ -337,11 +351,11 @@ footer h4 {
   color: #757575;
 }
 
-.bottom-icons{
+.bottom-icons {
   padding-top: 10px;
 }
 
-.Copyright{
+.Copyright {
   font-family: "Karla";
   text-align: left;
   font-size: 14px;
@@ -349,11 +363,31 @@ footer h4 {
   padding-top: 30px;
   padding-bottom: 30px;
 }
-.Copyright a{
-  font-family: 'Poppins', sans-serif;
+.Copyright a {
+  font-family: "Poppins", sans-serif;
   font-weight: 600;
   font-size: 14px;
   /* font-weight: 600; */
   text-decoration: none;
   color: #42495b;
+}
+
+.search-input{
+  z-index: 99;
+  /* display: flex;  */
+  margin-left: 12px;
+  position: absolute;
+  width: 170px;
+  height: 50px;
+  border-radius: 15px;
+  border: solid 1px;
+  box-shadow: #151414;
+  left: -20px;
+  transition:width 1s;
+  transition:left 1s;
+}
+
+.search-input:focus{
+  left: -45px;
+  width: 200px;
 }
