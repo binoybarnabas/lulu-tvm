@@ -1,59 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>lulu-tvm/dine/cafe&restaurant</title>
-    <link rel="stylesheet" href="/styles/dinePage/innerCafe.css">
+    <title>lulu-tvm/dine/foodcourt</title>
+    <link rel="stylesheet" href="/styles/dinePage/innerCourt.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <section class="inner-cafe">
-        <section class="nav-bar">
+    <section class="quick-nav">
+        <a href="">Home</a> >
+        <a href="/pages/dinePage/dine.html">Dine Directory</a> 
+        ><a href="/pages/dinePage/court.html">Food Court</a> 
+        ><span class="court-name"> </span>
+    </section>
 
-        </section>
-    
-        <section class="quick-nav">
-            <a href="">Home</a> >
-            <a href="/pages/dinePage/dine.html">Dine Directory</a> 
-            ><span class="cafe-name"></span>
-        </section>
-    
-        <section class="cafe-info">
-            <div class="cafe-logo">
-                <img id="cafe-logo">
-            </div>
-            <div class="cafe-details">
-                <h2 class="name"></h2>
-                <p>Timings : 10:00 AM to 11:00 PM</p>
-                <i class="fa fa-phone"></i>&nbsp;<span class="tele-no"></span>&nbsp;&nbsp;<i class="fa fa-envelope"></i>&nbsp;<span class="email"></span>
-            </div>
-        </section>
-    
-        <section class="cafe-image">
-            <img src="/assets/dineAssets/image1.jfif" alt="">
-        </section>
-    
-        <section class="cafe-about">
-            <h2>About the Store</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas vitae corrupti quam soluta ipsum consequuntur. Tenetur at consequatur labore ad numquam eveniet accusantium reprehenderit nostrum aperiam consequuntur, quis illo corporis?</p>
-        </section>
-    
-        <section class="cafe-contact">
-            <p id="address"></p>
-            <p id="website">Website :</p>
-            <p>Payment :  Cash, Credit/Debit Card</p>
-        </section>
-    
-        <section class="cafe-similar">
-            <div class="similar-store">
-                <h2>Similar Stores</h2>
-            </div>
-            <div class="similar-image">
-                <div><img src="/assets/dineAssets/image1.jfif" alt=""></div>
-                <div><img src="/assets/dineAssets/image1.jfif" alt=""></div>
-                <div><img src="/assets/dineAssets/image1.jfif" alt=""></div>
-            </div>
-        </section>
+    <section class="court-info">
+        <div class="court-logo">
+            <img id="court-logo">
+        </div>
+        <div class="court-details">
+            <h2 class="name"></h2>
+            <p>Timings : 10:00 AM to 11:00 PM</p>
+            <i class="fa fa-phone"></i>&nbsp;<span class="tele-no"></span>&nbsp;&nbsp;<i class="fa fa-envelope"></i>&nbsp;<span class="email"></span>
+        </div>
+    </section>
+
+    <section class="court-image">
+        <img src="/assets/dineAssets/innerfoodcourt.jpg" alt="">
+    </section>
+
+    <section class="court-about">
+        <h2>About the Store</h2>
+        <p class="court-description"></p>
+    </section>
+
+    <section class="court-contact">
+        <p id="address"></p>
+        <p id="website">Website :</p>
+        <p>Payment : Cash, Credit/Debit Card</p>
+    </section>
+
+    <section class="court-similar">
+        <div class="similar-store">
+            <h2>Similar Stores</h2>
+        </div>
+        <div class="similar-image">
+            <div><img id="similar1"></div>
+            <div><img id="similar2"></div>
+            <div><img id="similar3"></div>
+        </div>
     </section>
 </body>
-<script src="/scripts/dineScript/innerCafe.js"></script>
+<script src="/scripts/dineScript/innerCourt.js"></script>
 </html>
