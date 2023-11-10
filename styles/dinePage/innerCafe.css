@@ -1,7 +1,7 @@
 .quick-nav {
-    display: inline;
     margin-left: 12%;
     font-size: 15px;
+    padding-top: 15px;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -21,6 +21,7 @@ a:hover {
     margin-top: 50px;
     margin-left: 10%;
     margin-bottom: 50px;
+    align-items: center;
 }
 
 .cafe-logo {
@@ -28,7 +29,7 @@ a:hover {
 }
 
 #cafe-logo {
-    height: 150px;
+    height: 200px;
     width: 250px;
     background-color: rgb(243, 236, 236);
 }
