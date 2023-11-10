@@ -1,0 +1,359 @@
+.nav-bar-wrapper {
+  display: flex;
+  padding-left: 2%;
+  padding-bottom: 20px;
+}
+
+.nav-bar-wrapper img {
+  /* width: 40%; */
+  height: 70px;
+  margin-top: 15px;
+}
+
+.nav-bar-wrapper-text {
+  padding-left: 7%;
+  padding-top: 2%;
+  font-family: "Lora", serif;
+}
+@keyframes borderAnimation {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.dropbtn {
+  background-color: white;
+  color: rgb(0, 0, 0);
+  /* padding: 16px; */
+  font-size: 16px;
+  border: solid 2px black;
+  border-radius: 15px;
+  height: 46px;
+  width: 138px;
+  font-family: "Roboto", sans-serif;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  /* flex: 1; */
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  border-bottom: solid 1px black;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background-color: #ffffff;
+}
+
+.nav-search-navigation {
+  /* padding-inline: 20px ; */
+  display: flex;
+  margin-left: 8%;
+  /* background-color: yellowgreen; */
+  align-items: center;
+  width: 300px;
+  justify-content: space-between;
+  margin-top: 35px;
+  position: relative;
+  right: 0;
+}
+
+.nav-bar-wrapper-text {
+  background-color: #ffffff;
+  text-align: center;
+  position: relative;
+}
+
+.nav-bar-wrapper-text a {
+  color: #151414;
+  text-decoration: none;
+  padding: 20px 30px;
+  display: inline-block;
+  position: relative;
+}
+
+/* Create the moving line using a pseudo-element (::before) */
+.nav-bar-wrapper-text a::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 3px;
+  background-color: blue;
+  top: 0;
+  left: 50%;
+  transition: width 0.3s ease;
+}
+
+/* Add animation on hover */
+.nav-bar-wrapper-text a:hover::before {
+  width: 100%;
+  left: 0;
+}
+
+.search-box img {
+  /* width: 100%; */
+  margin-top: 0px;
+  height: 45px;
+  /* margin-left: 15%; */
+}
+
+.search-box {
+  /* background-color: blue; */
+  height: 50px;
+  width: 50px;
+}
+.Hamburger {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.change .bar1 {
+  transform: translate(0, 11px) rotate(-45deg);
+}
+
+.change .bar2 {
+  opacity: 0;
+}
+
+.change .bar3 {
+  transform: translate(0, -11px) rotate(45deg);
+}
+
+.blue-box-active {
+  height: 100%;
+  width: 20%;
+  background-color: blue;
+  position: fixed;
+  z-index: 99;
+  left: 0px;
+  top: 0px;
+  animation: blueB 0.3s;
+  /* animation: bluec 3s; */
+}
+
+@keyframes blueB {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 20%;
+  }
+}
+
+@keyframes bluec {
+  from {
+    width: 20%;
+  }
+  to {
+    width: 0%;
+  }
+}
+
+.dropbtn img {
+  height: 50%;
+}
+
+.remove {
+  color: white;
+  padding-bottom: 27px;
+  margin-bottom: 65px;
+  text-decoration: none;
+}
+
+.blue-content-div {
+  padding: 20%;
+}
+
+.blueContentDiv {
+  padding-bottom: 8%;
+  font-family: "Roboto", Sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.social-icons {
+  display: flex;
+}
+.social-icons a {
+  color: initial;
+  padding-right: 10px;
+}
+.social-icons a:hover i {
+  animation-name: social-hover;
+  animation-duration: 0.25s;
+  opacity: 50%;
+}
+@keyframes social-hover {
+  from {
+    opacity: 100%;
+  }
+  to {
+    opacity: 50%;
+  }
+}
+i {
+  color: initial;
+}
+.social-and-newsletter {
+  display: flex;
+  background-color: #eeeeee;
+  justify-content: space-between;
+  height: 200px;
+  align-items: center;
+  padding: 10px;
+}
+footer h4 {
+  /* font-family: "Karla", sans-serif; */
+  font-family: "karla";
+  font-size: 22px;
+  font-weight: 700;
+  /* padding-top: 20px; */
+  margin-top: 0px;
+}
+.app-wrapper {
+  margin-right: 10%;
+}
+
+.news-letter input {
+  border: none;
+  width: 100%;
+  border-radius: 3px;
+  padding: 0 10px;
+  padding-right: 135px;
+  height: 45px;
+}
+
+.news-letter button {
+  margin-left: 90px;
+  border: none;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  width: 100%;
+}
+
+.news-letter-inp-bt {
+  display: flex;
+  margin-top: 10px;
+}
+
+.news-letter-inp-bt :hover {
+  animation-name: social-hover;
+  animation-duration: 0.25s;
+  opacity: 50%;
+}
+
+.news-letter {
+  font-family: "karla";
+  font-size: 22px;
+  font-weight: 700;
+  padding-top: 20px;
+}
+
+.app-wrapper {
+  font-family: "karla";
+  font-size: 22px;
+  font-weight: 700;
+  /* padding-top: 20px; */
+  margin-top: 0px;
+}
+.apps {
+  display: flex;
+}
+
+#playstore {
+  width: 140px;
+  height: 48px;
+  padding-top: 5px;
+}
+.apps img {
+  width: 180px;
+  /* height: 50px; */
+}
+
+.contactfooterflexWrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+.contactfooterflexWrapper p {
+  font-family: "karla";
+  font-size: 22px;
+  font-weight: 700;
+}
+.contactfooterflexWrapper a,
+.finduscontentwrapper {
+  font-family: "Karla", Sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+  text-decoration: none;
+  line-height: 2em;
+  letter-spacing: 0px;
+  word-spacing: 0em;
+  color: #757575;
+}
+
+.bottom-icons{
+  padding-top: 10px;
+}
+
+.Copyright{
+  font-family: "Karla";
+  text-align: left;
+  font-size: 14px;
+  font-weight: normal;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.Copyright a{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  /* font-weight: 600; */
+  text-decoration: none;
+  color: #42495b;
+}
