@@ -43,8 +43,8 @@ const createInnerCafe = (newData) => {
             const randomIndex = Math.floor((Math.random() * 12)+1);
             document.querySelector(`#similar${i}`).src = data.users[randomIndex].image;
             document.querySelector(`#similar${i}`)
-            addEventListener("click",( )=>{
-                window.location.href=`innerCafe.html?id=${randomIndex}`;
+            .addEventListener("click",( )=>{
+                window.location.href=`innerCafe.html?id=${randomIndex+1}`;
             });
         }
     }
