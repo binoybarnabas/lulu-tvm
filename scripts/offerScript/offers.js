@@ -1,51 +1,53 @@
-const url = 'https://dummyjson.com/users';
+// Fetching data from API
 
-    const getData = async(url)=>{
-        try{
-            const response = await fetch(url);
-            const data = await response.json();
-            console.log(data);
-            data.users.map((userData)=>{
-                showData = document.querySelector('.display');
-                const offerData = createOfferData(userData);
-                showData.appendChild(offerData);
-            })
-        }
-        catch(e){
-            console.log(e)
-        }
-        
-    }
+const url = "https://dummyjson.com/users";
 
-    getData(url);
+const getData = async (url) => {
+  try {
+    const response = await fetch(url);
+    const data = await response.json();
+    console.log(data);
+    data.users.map((userData) => {
+      showData = document.querySelector(".display");
+      const offerData = createOfferData(userData);
+      showData.appendChild(offerData);
+    });
+  } catch (e) {
+    console.log(e);
+  }
+};
 
-    const createOfferData = (userData)=>{
+getData(url);
 
-    const offerCards = document.createElement('div');
-    offerCards.classList.add("item");
-    const offerImg = document.createElement('img');
-    const h1 = document.createElement('h2');
-    const h3 = document.createElement('h3');
-    const h2 = document.createElement('h2');
-    
-    offerImg.src= userData.image;
-    h1.textContent = userData.domain;
-    h3.textContent = userData.company.department;
-    h2.textContent = userData.birthDate;
+//Creating elements dynamically
+const createOfferData = (userData) => {
+  const offerCards = document.createElement("div");
+  offerCards.classList.add("item");
+  const offerImg = document.createElement("img");
+  const h1 = document.createElement("h2");
+  const h3 = document.createElement("h3");
+  const h2 = document.createElement("h2");
 
-    offerCards.appendChild(offerImg);
-    offerCards.appendChild(h1);
-    offerCards.appendChild(h3);
-    offerCards.appendChild(h2);
+  //Storing values into elements
+  offerImg.src = userData.image;
+  h1.textContent = userData.firstName;
+  h3.textContent = userData.company.department;
+  h2.textContent = userData.birthDate;
 
-    offerCards.addEventListener('click',()=>{
+  //Appending element to parent elements
+  offerCards.appendChild(offerImg);
+  offerCards.appendChild(h1);
+  offerCards.appendChild(h3);
+  offerCards.appendChild(h2);
+
+  //EventListener to go to new page for the required ID
+  offerCards.addEventListener("click", () => {
     openNewPage(userData);
     console.log("hello event");
-    })
-    return offerCards;
+  });
+  return offerCards;
+};
 
-    }
-
-    const openNewPage = (userData)=>{
-        window.location.href = `offersInner.html?id=${userData.id}`
-    }
+const openNewPage = (userData) => {
+  window.location.href = `offersInner.html?id=${userData.id}`;
+};

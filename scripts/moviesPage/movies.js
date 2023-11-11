@@ -1,23 +1,3 @@
-// const u = "https://api.slingacademy.com/v1/sample-data/photos";
-
-// const getDatas = async (url) => {
-//   try {
-//     const response = await fetch(url);
-//     //console.log(response);
-//     const data = await response.json();
-//     console.log(data);
-//     data.users.map((userData) => {
-//       const movieCards = document.querySelector(".movie-cards");
-//       const cardData = createCardData(userData);
-//       movieCards.appendChild(cardData);
-//     });
-//   } catch (e) {
-//     console.log(e);
-//   }
-// };
-
-// getDatas(u);
-
 const url = "https://dummyjson.com/users";
 
 const getData = async (url) => {

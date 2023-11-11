@@ -16,25 +16,25 @@ const newData = data.users.filter((userData)=>{
         return userData;   
     }
 });
-createInnerCafe(newData);
+createInnerCourt(newData);
 similarCards(data);
 }
 catch(e){   
     console.log(e); 
 }
 }
- 
+
 // Calling the async function
 dataProcess(url,id);
 
 // Setting values to the html elements
-const createInnerCafe = (newData) => {
-    document.querySelector(".cafe-name").textContent = newData[0].company.name;
-    document.querySelector("#cafe-logo").src = newData[0].image;
+const createInnerCourt = (newData) => {
+    document.querySelector(".court-name").textContent = newData[0].company.name;
+    document.querySelector("#court-logo").src = newData[0].image;
     document.querySelector(".name").textContent = newData[0].company.name;
     document.querySelector(".tele-no").innerHTML = newData[0].phone;
     document.querySelector(".email").innerHTML = newData[0].email;
-    document.querySelector(".cafe-description").textContent = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas vitae corrupti quam soluta ipsum consequuntur. Tenetur at consequatur labore ad numquam eveniet accusantium reprehenderit nostrum aperiam consequuntur, quis illo corporis?";
+    document.querySelector(".court-description").textContent = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas vitae corrupti quam soluta ipsum consequuntur. Tenetur at consequatur labore ad numquam eveniet accusantium reprehenderit nostrum aperiam consequuntur, quis illo corporis?";
     document.querySelector("#address").innerHTML = "Address : " + newData[0].address.address;
     document.querySelector("#website").innerHTML = "Website : " + newData[0].image;
 }
@@ -44,8 +44,7 @@ const similarCards =(data)=>{
     for (let i=1; i<4; i++){
         const randomIndex = Math.floor((Math.random() * 12)+1);
         document.querySelector(`#similar${i}`).src = data.users[randomIndex].image;
-        document.querySelector(`#similar${i}`)
-        .addEventListener("click",( )=>{
+        document.querySelector(`#similar${i}`).addEventListener("click",( )=>{
             window.location.href=`innerCafe.html?id=${randomIndex+1}`;
         });
     }
