@@ -11,9 +11,10 @@
 }
 
 .nav-bar-wrapper-text {
-  padding-left: 7%;
+  padding-left: 6%;
   padding-top: 2%;
   font-family: "Lora", serif;
+
 }
 @keyframes borderAnimation {
   0% {
