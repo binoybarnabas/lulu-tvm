@@ -54,7 +54,7 @@ h1{
     -o-transition: all 0.4s ease-in-out;
     transition: all 0.4s ease-in-out;
 }
-img{
+.item img{
     height:400px;
     width:400px;
     border: 2px solid black;

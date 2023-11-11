@@ -55,7 +55,7 @@ h1{
 .image{
     flex:1;
 }
-img{
+.item img{
     height:400px;
     width:500px;
 }
