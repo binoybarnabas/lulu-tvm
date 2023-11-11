@@ -17,6 +17,7 @@ const dataProcess = async (url, id) => {
     });
 
     const movieCard = document.querySelector(".movieCard-wrapper");
+    const quickNavMovieCard = document.querySelector(".quick-nav-movieCard");
 
     const movieCardHeading = document.createElement("div");
     movieCardHeading.classList.add("movieCardHeading");
@@ -38,6 +39,8 @@ const dataProcess = async (url, id) => {
     const synopsis = document.createElement("span");
     const releaseDateTitle = document.createElement("strong");
     const releaseDate = document.createElement("span");
+
+    quickNavMovieCard.textContent = newData[0].company.name;
 
     const movieCardImage = document.createElement("img");
     movieCardImage.src = newData[0].image;
