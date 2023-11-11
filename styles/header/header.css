@@ -234,9 +234,9 @@
     opacity: 50%;
   }
 }
-/* i {
+i {
   color: initial;
-} */
+}
 .social-and-newsletter {
   display: flex;
   background-color: #eeeeee;
