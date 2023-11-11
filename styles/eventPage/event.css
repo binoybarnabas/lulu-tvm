@@ -1,111 +1,99 @@
-/* .offers{
-    margin-right: 20px;
-    margin-left: 20px;
-} */
 .current {
-    font-family: "Karla", Sans-serif;
-    font-size: 20px;  
-    font-weight: bold;  
-    padding : 30px;
+  font-family: "Karla", Sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 30px;
 }
 
-.current a{
-    color:black;
-    text-decoration: none;
-
+.current a {
+  color: black;
+  text-decoration: none;
 }
-a:hover{
-    color:#007bff;
-}
-
-h1{
-    font-family: "Karla", Sans-serif;
-    font-size: 60px;  
-    font-weight:500;  
-    /* padding : 30px; */
+a:hover {
+  color: #007bff;
 }
 
-/* .display{
-     display: flex; 
-     flex-wrap: wrap; 
-      width:100%; 
-    justify-content: space-between; 
-} */
-.item{
-    display:flex;
-    background: #fff;
-    border: 1px solid #ddd;
-    box-shadow: 0 10px 20px rgba(22, 7, 77, 0.2);
-    margin: 15px 70px 60px;
-    border-radius: 5px;
-    padding: 30px;
-    height:500px;
-}
-.item:hover{
-    -webkit-transform: scale(1.1);
-    -moz-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    -o-transform: scale(1.1);
-    transform: rotate scale(1.1);
-    -webkit-transition: all 0.4s ease-in-out;
-    -moz-transition: all 0.4s ease-in-out;
-    -o-transition: all 0.4s ease-in-out;
-    transition: all 0.4s ease-in-out;
-}
-.image{
-    flex:1;
-}
-.item img{
-    height:400px;
-    width:500px;
-}
-.event-desc{
-    flex:1;
-    padding-top:50px;
-}
-p{
-    font-family: "Karla", Sans-serif;
-    font-weight: lighter;
-    font-size: medium;
-    padding-bottom: 30px;
-    letter-spacing: 1px;
+h1 {
+  font-family: "Karla", Sans-serif;
+  font-size: 60px;
+  font-weight: 500;
 }
 
-.icon{
-    display: flex;
+.item {
+  display: flex;
+  background: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 10px 20px rgba(22, 7, 77, 0.2);
+  margin: 15px 70px 60px;
+  border-radius: 5px;
+  padding: 30px;
+  height: 500px;
 }
-.calender-icon img{
-    height:30px;
-    width:30px;
+.item:hover {
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  transform: rotate scale(1.1);
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+.image {
+  flex: 1;
+}
+.item img {
+  height: 400px;
+  width: 500px;
+}
+.event-desc {
+  flex: 1;
+  padding-top: 50px;
+}
+p {
+  font-family: "Karla", Sans-serif;
+  font-weight: lighter;
+  font-size: medium;
+  padding-bottom: 30px;
+  letter-spacing: 1px;
 }
 
-.map-icon img{
-    height:30px;
-    width:30px;
+.icon {
+  display: flex;
 }
-.icon h1{
-    padding-left: 10px;
-    font-size: 15px;
-}
-
-button{
-    background-color: #d7d8db;
-    border-radius: 6px;
-    border: none;
-    color:#686a6e;
-    width:180px;
-    height:60px;
-    font-size: 18px;
-    font-weight: bold;
+.calender-icon img {
+  height: 30px;
+  width: 30px;
 }
 
-button:hover{
-    background-color: #686a6e;
-    border-radius: 6px;
-    border: none;
-    color:#d7d8db;
-    width:180px;
-    height:60px;
-    font-size: 18px;
-    font-weight: bold;
+.map-icon img {
+  height: 30px;
+  width: 30px;
+}
+.icon h1 {
+  padding-left: 10px;
+  font-size: 15px;
+}
+
+button {
+  background-color: #d7d8db;
+  border-radius: 6px;
+  border: none;
+  color: #686a6e;
+  width: 180px;
+  height: 60px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #686a6e;
+  border-radius: 6px;
+  border: none;
+  color: #d7d8db;
+  width: 180px;
+  height: 60px;
+  font-size: 18px;
+  font-weight: bold;
 }
