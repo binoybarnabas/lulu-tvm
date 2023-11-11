@@ -1,0 +1,55 @@
+.funtura {
+  display: flex;
+  padding-left: 20px;
+}
+.funtura-discription h3 {
+  font-family: "Karla", sans-serif;
+  font-weight: 600;
+  font-size: 22px;
+}
+.funtura-discription p {
+  font-family: "Karla", sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  color: #333333;
+}
+
+.about h2 {
+  font-family: "Karla", Sans-serif;
+  font-weight: 600;
+  font-size: 28px;
+}
+
+.about{
+    width: 80%;
+  margin-left: 10%;
+}
+.about p {
+  font-family: "Karla", Sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #333333;
+}
+
+.imageandaddressflex {
+  display: flex;
+  justify-content: space-around;
+  font-family: "Karla", Sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #333333;
+}
+
+.similarstores {
+  justify-content: center;
+  /* align-items: center; */
+  display: flex;
+  background-color: #f8f8f8;
+  
+}
+.similarstores h3{
+  font-family: "Lora";
+  font-weight: 600;
+  text-align: center;
+  font-size: 28px;
+}
