@@ -229,7 +229,7 @@
 }
 
 .social-icons {
-  display: flex;
+  /* display: flex; */
 }
 .social-icons a {
   color: initial;
