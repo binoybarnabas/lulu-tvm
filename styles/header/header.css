@@ -396,3 +396,21 @@ footer h4 {
 .icons {
   color: initial;
 }
+
+
+.footer-08{
+  background-color: #12cc94;
+}
+
+.form-group{
+  margin-bottom: 1rem;
+  border: 0;
+}
+.form-control {
+  border: 0px;
+}
+
+.submit{
+  background: #2f89fc !important;
+  color: #fff;
+}
