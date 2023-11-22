@@ -19,18 +19,21 @@ const getData = async (url) => {
         const electronicCard = createElectronicCard(electronic);
         currentRow.appendChild(electronicCard);
     });
+    
 };
 
 getData(url);
 
 const createElectronicCard = (electronic) => {
     const card = document.createElement('div');
-    card.classList.add('card', 'card-style', 'col-lg-4', 'col-md-6', 'col-sm-12');
-    card.style.height = '500px'; 
+    card.classList.add('card','pop-out','col-lg-4','col-sm-12');
+    card.style.height = '450px'; 
+    card.style.width = '300px';
+    card.style.margin = '25px';
 
     const image = document.createElement('img');    
     image.classList.add('img-fluid','card-img-top');
-    image.style.height = '300px';
+    image.style.height = '200px';
     // Use object-fit to control the aspect ratio of the image
     image.style.objectFit = 'contain';
     image.src = electronic.image;

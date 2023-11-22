@@ -11,12 +11,22 @@ body{
     display: flex;
     flex-wrap:wrap;
     align-items:center;
-    justify-content: center;
+    justify-content: space-around;
 }
 img{
     height:100px;
     width:100px;
 }
+    .pop-out {
+        transition: box-shadow 0.3s ease-in-out;
+      }
+      .pop-out:hover {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        transform: scale(1.1);
+        transition: 0.3s ease-in-out;
+      }
+
+
 
 /* .card{
     flex-basis:70%;
