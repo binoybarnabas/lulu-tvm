@@ -87,10 +87,10 @@ const createCardData = (userData: UserData,movieData: MovieData): HTMLElement =>
   const img = document.createElement("img");
   img.classList.add("card-img-top","h-100");
 
-  img.style.marginTop = "10px";
+  // img.style.marginTop = "10px";
 
   const div2 = document.createElement("div");
-  div2.classList.add("card-body");
+  div2.classList.add("card-body","text-center");
 
   const movieName = document.createElement("h5");
   movieName.classList.add("card-title");
@@ -98,10 +98,12 @@ const createCardData = (userData: UserData,movieData: MovieData): HTMLElement =>
   const directorTitle = document.createElement("p");
   directorTitle.classList.add("card-text");
 
+  // directorTitle.style.alignContent="center";
+
   img.src = movieData.posterURL;
   movieName.textContent =movieData.title;
 
-  directorTitle.textContent = userData.firstName + " " + userData.lastName + userData.id;
+  directorTitle.textContent = userData.firstName + " " + userData.lastName;
 
 
 
