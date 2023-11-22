@@ -17,6 +17,7 @@ h1 {
   font-family: "Karla", Sans-serif;
   font-size: 60px;
   font-weight: 500;
+  padding: 10px;
 }
 
 .item {
@@ -42,10 +43,12 @@ h1 {
 }
 .image {
   flex: 1;
+  padding: 50px;
 }
 .item img {
   height: 400px;
   width: 500px;
+  /* margin: 30px; */
 }
 .event-desc {
   flex: 1;
@@ -78,7 +81,7 @@ p {
 
 button {
   background-color: #d7d8db;
-  border-radius: 6px;
+  border-radius: 10px;
   border: none;
   color: #686a6e;
   width: 180px;

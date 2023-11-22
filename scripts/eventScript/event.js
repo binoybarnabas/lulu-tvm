@@ -1,13 +1,15 @@
 // Fetching data from API
 
-const url = "https://dummyjson.com/users";
+// const url = "https://dummyjson.com/users";
+
+const url = "https://mocki.io/v1/f940fb9c-57a4-4207-9ca9-8b2bf05c313c";
 
 const getData = async (url) => {
   try {
     const response = await fetch(url);
     const data = await response.json();
     console.log(data);
-    data.users.map((userData) => {
+    data.map((userData) => {
       showData = document.querySelector(".display");
       const eventData = createEventData(userData);
       showData.appendChild(eventData);
@@ -47,11 +49,11 @@ const createEventData = (userData) => {
   //Storing values into elements
   calender.src = "../../assets/eventAssets/img/calender.png";
   map.src = "../../assets/eventAssets/img/map.png";
-  eventImg.src = userData.image;
-  h1.textContent = userData.firstName;
-  p.textContent = userData.birthDate;
-  h2.textContent = userData.lastName;
-  h3.textContent = userData.birthDate;
+  eventImg.src = userData.url;
+  h1.textContent = userData.name;
+  p.textContent = userData.desc;
+  h2.textContent = userData.date;
+  h3.textContent = userData.place;
   button.textContent = "SHOW MORE";
 
   //Appending element to parent elements

@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../../styles/eventPage/event.css" />
+    <!-- <link rel="stylesheet" href="../../styles/eventPage/event.css" /> -->
+    <link rel="stylesheet" href="../../styles/eventPage/event-book.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
@@ -84,16 +85,61 @@
 
 
 
-    <section class="events">
+    <!-- <section class="events"> -->
       <!-- Quick Links and Heading -->
       <div class="current">
         <a href="../homePage/home.html">Home</a> > Events
         <h1><b>Events</b></h1>
       </div>
 
+      <div class="container">
+        <div class="text">
+           Contact us Form
+        </div>
+        <form action="#">
+           <div class="form-row">
+              <div class="input-data">
+                 <input type="text" required>
+                 <div class="underline"></div>
+                 <label for="">First Name</label>
+              </div>
+              <div class="input-data">
+                 <input type="text" required>
+                 <div class="underline"></div>
+                 <label for="">Last Name</label>
+              </div>
+           </div>
+           <div class="form-row">
+              <div class="input-data">
+                 <input type="text" required>
+                 <div class="underline"></div>
+                 <label for="">Email Address</label>
+              </div>
+              <div class="input-data">
+                 <input type="text" required>
+                 <div class="underline"></div>
+                 <label for="">Website Name</label>
+              </div>
+           </div>
+           <div class="form-row">
+           <div class="input-data textarea">
+              <textarea rows="8" cols="80" required></textarea>
+              <br />
+              <div class="underline"></div>
+              <label for="">Write your message</label>
+              <br />
+              <div class="form-row submit-btn">
+                 <div class="input-data">
+                    <div class="inner"></div>
+                    <input type="submit" value="submit">
+                 </div>
+              </div>
+        </form>
+        </div>
+
       <!--Event items display-->
-      <div class="display"></div>
-    </section>
+      <!-- <div class="display"></div> -->
+    <!-- </section> -->
   </body>
   <script src="../../scripts/eventScript/event.js"></script>
 
