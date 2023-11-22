@@ -1,19 +1,7 @@
-var person = {
-  firstname: null,
-  email: null,
-  subject: null,
-  textArea: null,
-};
-
-const scriptURL =
-  "https://script.google.com/macros/s/AKfycbwq25rzqXqiqlijZoZhOzen8JA86IAsc7uc12wh9ZI23qERYuBBrCv3o3pdYGO5v5Xjkw/exec";
-
-const form = document.forms["contact-form"];
-
-console.log(new FormData(form));
-
 document.addEventListener("DOMContentLoaded", function () {
-  const form = document.querySelector(".contact-form");
+    const form = document.querySelector(".contact-form");
+    var data = new Date();
+    document.getElementById('date').value = Date();
 
   if (form) {
     form.addEventListener("submit", async (e) => {
@@ -21,11 +9,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
       try {
         const formData = new FormData(form);
+          console.log(formData);
+          console.log(data);
         const response = await fetch(
           "https://script.google.com/macros/s/AKfycbwq25rzqXqiqlijZoZhOzen8JA86IAsc7uc12wh9ZI23qERYuBBrCv3o3pdYGO5v5Xjkw/exec",
           {
             method: "POST",
-            body: formData,
+              body: formData, data
           }
         );
 
