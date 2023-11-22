@@ -36,36 +36,57 @@
 
     <footer>
       <div class="social-and-newsletter">
-        <div>
-          <h4>Follow Us</h4>
-          <div class="social-icons">
-            <a href=""><i class="fa-brands fa-facebook fa-2xl icons" s></i></a>
-            <a href=""><i class="fa-brands fa-instagram fa-2xl icons"></i></a>
-            <a href=""><i class="fa-brands fa-twitter fa-2xl icons"></i></a>
-            <a href=""><i class="fa-brands fa-youtube fa-2xl icons"></i></a>
-            <a href=""><i class="fa-brands fa-linkedin fa-2xl icons"></i></a>
-          </div>
-        </div>
-        <div class="news-letter">
-          Be the First one to know <br />
-          <div class="news-letter-inp-bt">
-            <input type="text" name="" id="" placeholder="Email*" />
-            <button>SIGNUP</button>
-          </div>
-        </div>
-
-        <div class="app-wrapper">
-          Download the App
-          <div class="apps">
-            <a href=""
-              ><img
-                id="playstore"
-                src="/assets/headerAndFooter/images.png"
-                alt="img1"
-            /></a>
-            <a href=""
-              ><img src="/assets/headerAndFooter/images (1).png" alt="img2"
-            /></a>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col">
+              <div>
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                  <a href=""
+                    ><i class="fa-brands fa-facebook fa-2xl icons" s></i
+                  ></a>
+                  <a href=""
+                    ><i class="fa-brands fa-instagram fa-2xl icons"></i
+                  ></a>
+                  <a href=""
+                    ><i class="fa-brands fa-twitter fa-2xl icons"></i
+                  ></a>
+                  <a href=""
+                    ><i class="fa-brands fa-youtube fa-2xl icons"></i
+                  ></a>
+                  <a href=""
+                    ><i class="fa-brands fa-linkedin fa-2xl icons"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="news-letter">
+                Be the First one to know <br />
+                <div class="news-letter-inp-bt">
+                  <input type="text" name="" id="" placeholder="Email*" />
+                  <button>SIGNUP</button>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="app-wrapper">
+                Download the App
+                <div class="apps">
+                  <a href=""
+                    ><img
+                      id="playstore"
+                      src="/assets/headerAndFooter/images.png"
+                      alt="img1"
+                  /></a>
+                  <a href=""
+                    ><img
+                      src="/assets/headerAndFooter/images (1).png"
+                      alt="img2"
+                  /></a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -186,15 +207,17 @@
                   type="text"
                   class="form-control border-0"
                   placeholder="Your Name"
+                  required
                 />
               </div>
               <div class="form-group">
                 <input
                   name="email"
                   id="email"
-                  type="text"
+                  type="email"
                   class="form-control border-0"
                   placeholder="Your Email"
+                  required
                 />
               </div>
               <div class="form-group">
@@ -204,6 +227,7 @@
                   class="form-control border-0"
                   id="subject"
                   placeholder="Subject"
+                  required
                 />
               </div>
               <div class="form-group">
@@ -216,9 +240,10 @@
                   rows="3"
                   class="form-control"
                   placeholder="Message"
+                  required
                 ></textarea>
               </div>
-              <input class="block" id="date" name="date">
+              <input class="block" id="date" name="date" />
               <div class="form-group">
                 <button
                   id="submit"
