@@ -2,6 +2,8 @@
   display: flex;
   padding-left: 2%;
   padding-bottom: 20px;
+  /* background-color: #C3ACD0; */
+  background-color: #dddddd;
 }
 
 .nav-bar-wrapper img {
@@ -14,6 +16,7 @@
   padding-left: 7%;
   padding-top: 2%;
   font-family: "Lora", serif;
+  background-image:  linear-gradient(#463c41);
 }
 @keyframes borderAnimation {
   0% {
@@ -91,11 +94,11 @@
   right: 0;
 }
 
-.nav-bar-wrapper-text {
+/* .nav-bar-wrapper-text {
   background-color: #ffffff;
   text-align: center;
   position: relative;
-}
+} */
 
 .nav-bar-wrapper-text a {
   color: #151414;
