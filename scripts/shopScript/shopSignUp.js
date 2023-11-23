@@ -1,6 +1,7 @@
 let fullName,userName,email,password,phoneNumber,passwordConfirm,getGender;
 url = 'https://fakestoreapi.com/users';
 let checker = -1;
+
 const signUp =()=>{
 fullName = document.getElementById('fname').value;
 userName = document.getElementById('username').value;
@@ -11,48 +12,70 @@ passwordConfirm = document.getElementById('password-confirm').value;
 getGender = document.signUpData.gender.value;
 console.log(getGender,fullName,userName,email,phoneNumber,password,passwordConfirm);
 const data = {fullName,userName,email,phoneNumber,getGender,password,passwordConfirm};
-sendData(data,url);
 }   
+const loadingSpinner = document.getElementById('loadingSpinner');
+const contentDiv = document.querySelector('.content');
 
+document.getElementById('sign-up-button').addEventListener('click', ()=>{
+    sendData();
+  
+})
 
-const scriptURL = "https://script.google.com/macros/s/AKfycbwC4hs2h_GXHeAlZoMMkZeWX4i_b-xE0mWFIrgN8MP3nCsYu8h4scI7AwciKA63TQsfBA/exec";
- 
-  const form = document.forms["signUpData"];
-   
-  form.addEventListener("submit", (e) => {
-    e.preventDefault();
-    fetch(scriptURL, { method: "POST", body: new FormData(form) })
-      .then((response) =>
-        alert("Thank you! your form is submitted successfully.")
-      )
-      .then(() => {
-        window.location.reload();
-      })
-      .catch((error) => console.error("Error!", error.message));
-  });
+const sendData = ()=>{
+      const scriptURL = "https://script.google.com/macros/s/AKfycbwC4hs2h_GXHeAlZoMMkZeWX4i_b-xE0mWFIrgN8MP3nCsYu8h4scI7AwciKA63TQsfBA/exec";
+      const form = document.forms["signUpData"];
+        
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        setTimeout(()=>{
+            loadingSpinner.style.display = 'block';
+        },2000);
+        loadingSpinner.style.display = 'none';
+        fetch(scriptURL, { method: "POST",  
+            body: new FormData(form) })
+          .then((response) =>{
+            let getValidatedCheck = validateData();
+            console.log(getValidatedCheck);
+            if(response.ok === true && getValidatedCheck == 6){  //put this outside fetch()
+                loadingSpinner.style.display = 'none';
+                contentDiv.style.display = 'block';
 
+            window.location.href = 'shopPageLogin.html';
+            window.alert("successfully signed up...");
+            }
+            // alert("Thank you! your form is submitted successfully.")
+            }
+          )
+          .catch((error) => console.error("Error!", error.message));
+      });
 
-const sendData = async (data,url)=>{
-    const response = await fetch(url,{
-        method:'post',
-        headers:{
-            'Content-Type':'application/json'
-        },
-        body:JSON.stringify(data)
-    });
-    const dataResponse = await response.json();
-    console.log(response);
-    // console.log(data);
-    let getValidatedCheck = validateData();
-    console.log(getValidatedCheck);
-
-    if(response.ok === true && getValidatedCheck == 6){
-        window.location.href = 'shopPageLogin.html';
-        window.alert("successfully signed up...");
-    }
 }
 
+
+
+// const sendData = async (data,url)=>{
+//     const response = await fetch(url,{
+//         method:'post',
+//         headers:{
+//             'Content-Type':'application/json'
+//         },
+//         body:JSON.stringify(data)
+//     });
+//     const dataResponse = await response.json();
+//     console.log(response);
+//     // console.log(data);
+//     let getValidatedCheck = validateData();
+//     console.log(getValidatedCheck);
+
+//     if(response.ok === true && getValidatedCheck == 6){
+//         window.location.href = 'shopPageLogin.html';
+//         window.alert("successfully signed up...");
+//     }
+// }
+
+//validation of the input data
 const validateData = ()=>{
+    let checkToValidate;
     if(fullName === ''){
         const fullNameField = document.getElementById('fname');
         fullNameField.classList.add('error-field');
@@ -148,7 +171,9 @@ const validateData = ()=>{
     }
     else
     ++checker;
-    return checker;
+    checkToValidate = checker;
+    checker = -1;
+    return checkToValidate;
 }
 
 

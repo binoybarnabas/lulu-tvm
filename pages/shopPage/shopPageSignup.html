@@ -9,8 +9,12 @@
 <body>
 
     <div class="container">
+        <div id="loadingSpinner" class="spinner-border text-success" role="status" style="display: none;">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+
         <div class="title">Sign up!</div>
-        <div class="content">
+        <div class="content"> 
           <form action="#" name="signUpData" id="signUpData">
             <div class="user-details">
               <div class="input-box">
@@ -59,7 +63,7 @@
               </div>
             </div>
             <div class="button">
-              <button type="submit" onClick="signUp()">Sign up!</button>
+              <button type="submit" onClick="signUp()" id="sign-up-button">Sign up!</button>
             </div>
           </form>
           <span class="details">
