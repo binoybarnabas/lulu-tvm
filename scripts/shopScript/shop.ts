@@ -28,7 +28,7 @@ getData();
 
 const createCategory = (category: string): HTMLHeadingElement => {
   const h2 = document.createElement('h2');
-  h2.classList.add('category');
+  h2.classList.add('category','pop-out');
   h2.textContent = category;
   h2.addEventListener('click', () => {
     openCategory(category);

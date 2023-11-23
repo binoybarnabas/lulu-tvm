@@ -52,7 +52,7 @@ var getData = function () { return __awaiter(_this, void 0, void 0, function () 
             case 2:
                 data = _a.sent();
                 // Assuming .shop-list exists in your HTML
-                console.log(data);
+                // console.log(data);    
                 data.forEach(function (category) {
                     var shopList = document.querySelector('.shop-list');
                     var categoryShow = createCategory(category);
@@ -70,7 +70,7 @@ var getData = function () { return __awaiter(_this, void 0, void 0, function () 
 getData();
 var createCategory = function (category) {
     var h2 = document.createElement('h2');
-    h2.classList.add('category');
+    h2.classList.add('category', 'pop-out');
     h2.textContent = category;
     h2.addEventListener('click', function () {
         openCategory(category);

@@ -14,6 +14,24 @@ const data = {fullName,userName,email,phoneNumber,getGender,password,passwordCon
 sendData(data,url);
 }   
 
+
+const scriptURL = "https://script.google.com/macros/s/AKfycbwC4hs2h_GXHeAlZoMMkZeWX4i_b-xE0mWFIrgN8MP3nCsYu8h4scI7AwciKA63TQsfBA/exec";
+ 
+  const form = document.forms["signUpData"];
+   
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    fetch(scriptURL, { method: "POST", body: new FormData(form) })
+      .then((response) =>
+        alert("Thank you! your form is submitted successfully.")
+      )
+      .then(() => {
+        window.location.reload();
+      })
+      .catch((error) => console.error("Error!", error.message));
+  });
+
+
 const sendData = async (data,url)=>{
     const response = await fetch(url,{
         method:'post',
