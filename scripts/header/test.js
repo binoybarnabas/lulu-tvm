@@ -1,5 +1,3 @@
-
-
 function myFunction(x) {
   x.classList.toggle("change");
   let div = document.querySelector(".blue-box-active");
@@ -10,3 +8,10 @@ const input = () => {
   let inputbutton = document.querySelector(".search-input");
   inputbutton.classList.toggle("block");
 };
+
+console.log(screen.width);
+console.log(screen.height);
+
+
+
+
