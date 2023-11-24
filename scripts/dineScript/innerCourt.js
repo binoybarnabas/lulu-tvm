@@ -96,7 +96,7 @@ function validateForm() {
 const scriptURL =
   "https://script.google.com/macros/s/AKfycbxf1ip126JqhJLXlKnKz3Hcrhk10KfW-Dv_gvpQj_4lUkDmX0brLqMcSJPGHhACUoAF/exec";
 
-const form = document.querySelector(".form");
+const form = document.querySelector("#form");
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
