@@ -1,76 +1,81 @@
+const url: string = 'https://fakestoreapi.com/products/';
+const cardsPerRow: number = 3;
 
-let url = 'https://fakestoreapi.com/products/';
-let cardsPerRow = 3;
-const getData = async(url)=>{
-const response = await fetch(url);
-const data = await response.json();
-console.log(data);
+interface MenClothing {
+    id: number;
+    title: string;
+    image: string;
+    category: string;
+    price: number;
+}
 
-const menClothingSection = document.querySelector('.mens-clothing');
-let currentRow;
-// console.log(data);
-mensClothingData = data.filter((mensClothing)=>{
-    if(mensClothing.category == 'men\'s clothing'){
-       return mensClothing
-    }
-});
+const getData = async (url: string): Promise<void> => {
+    const response = await fetch(url);
+    const data: MenClothing[] = await response.json();
 
-mensClothingData.forEach((menClothing, index) => {
-    if (index % cardsPerRow === 0) {
-        // Start a new row
-        currentRow = document.createElement('div');
-        currentRow.classList.add('row');
-        menClothingSection.appendChild(currentRow);
-    }
+    console.log(data);
 
-    const menClothingCard = createMenClothingCard(menClothing);
-    currentRow.appendChild(menClothingCard);
-});
+    const menClothingSection: HTMLElement | null = document.querySelector('.mens-clothing');
+    let currentRow: HTMLDivElement | undefined;
 
-// console.log(mensClothingData);
-// mensClothingData.map((mensClothing)=>{
-//     const mensClothingSection = document.querySelector('.mens-clothing');
-//     const mensClothingCard = createMensClothingCard(mensClothing);
-//     mensClothingSection.appendChild(mensClothingCard);
-// })
+    const mensClothingData: MenClothing[] = data.filter((mensClothing) => {
+        if (mensClothing.category === 'men\'s clothing') {
+            return mensClothing;
+        }
+    });
 
+    mensClothingData.forEach((menClothing, index) => {
+        if (index % cardsPerRow === 0) {
+            // Start a new row
+            currentRow = document.createElement('div');
+            currentRow.classList.add('row');
+            if (menClothingSection) {
+                menClothingSection.appendChild(currentRow);
+            }
+        }
+
+        const menClothingCard = createMenClothingCard(menClothing);
+        if (currentRow) {
+            currentRow.appendChild(menClothingCard);
+        }
+    });
 };
 
 getData(url);
 
-const createMenClothingCard = (menClothing) => {
-    const card = document.createElement('div');
-    card.classList.add('card','pop-out','col-lg-4','col-sm-12');
-    card.style.height = '450px'; 
+const createMenClothingCard = (menClothing: MenClothing): HTMLDivElement => {
+    const card: HTMLDivElement = document.createElement('div');
+    card.classList.add('card', 'pop-out', 'col-lg-4', 'col-sm-12');
+    card.style.height = '450px';
     card.style.width = '300px';
     card.style.margin = '25px';
 
-    const image = document.createElement('img');    
-    image.classList.add('img-fluid','card-img-top');
+    const image: HTMLImageElement = document.createElement('img');
+    image.classList.add('img-fluid', 'card-img-top');
     image.style.height = '200px';
     // Use object-fit to control the aspect ratio of the image
     image.style.objectFit = 'contain';
     image.src = menClothing.image;
 
-    const cardBody = document.createElement('div');
+    const cardBody: HTMLDivElement = document.createElement('div');
     cardBody.classList.add('card-body');
 
-    const cardTitle = document.createElement('h5');
+    const cardTitle: HTMLHeadingElement = document.createElement('h5');
     cardTitle.classList.add('card-title');
     cardTitle.textContent = menClothing.title;
 
-    const cardText = document.createElement('p');
+    const cardText: HTMLParagraphElement = document.createElement('p');
     cardText.classList.add('card-text');
     cardText.textContent = menClothing.category;
 
     cardBody.appendChild(cardTitle);
     cardBody.appendChild(cardText);
 
-    const ulListGroup = document.createElement('ul');
+    const ulListGroup: HTMLUListElement = document.createElement('ul');
     ulListGroup.classList.add('list-group');
     ulListGroup.classList.add('list-group-flush');
 
-    const liListItem = document.createElement('li');
+    const liListItem: HTMLLIElement = document.createElement('li');
     liListItem.classList.add('list-group-item');
     liListItem.textContent = "$" + menClothing.price;
 
@@ -87,9 +92,96 @@ const createMenClothingCard = (menClothing) => {
     return card;
 };
 
-const addEventAndRedirect = (menClothing) => {
+const addEventAndRedirect = (menClothing: MenClothing): void => {
     window.location.href = `shopIndividual.html?id=${menClothing.id}&category=${menClothing.category}`;
 };
+
+
+
+// let url = 'https://fakestoreapi.com/products/';
+// let cardsPerRow = 3;
+// const getData = async(url)=>{
+// const response = await fetch(url);
+// const data = await response.json();
+// console.log(data);
+
+// const menClothingSection = document.querySelector('.mens-clothing');
+// let currentRow;
+// // console.log(data);
+// mensClothingData = data.filter((mensClothing)=>{
+//     if(mensClothing.category == 'men\'s clothing'){
+//        return mensClothing
+//     }
+// });
+
+// mensClothingData.forEach((menClothing, index) => {
+//     if (index % cardsPerRow === 0) {
+//         // Start a new row
+//         currentRow = document.createElement('div');
+//         currentRow.classList.add('row');
+//         menClothingSection.appendChild(currentRow);
+//     }
+
+//     const menClothingCard = createMenClothingCard(menClothing);
+//     currentRow.appendChild(menClothingCard);
+// });
+
+// };
+
+// getData(url);
+
+// const createMenClothingCard = (menClothing) => {
+//     const card = document.createElement('div');
+//     card.classList.add('card','pop-out','col-lg-4','col-sm-12');
+//     card.style.height = '450px'; 
+//     card.style.width = '300px';
+//     card.style.margin = '25px';
+
+//     const image = document.createElement('img');    
+//     image.classList.add('img-fluid','card-img-top');
+//     image.style.height = '200px';
+//     // Use object-fit to control the aspect ratio of the image
+//     image.style.objectFit = 'contain';
+//     image.src = menClothing.image;
+
+//     const cardBody = document.createElement('div');
+//     cardBody.classList.add('card-body');
+
+//     const cardTitle = document.createElement('h5');
+//     cardTitle.classList.add('card-title');
+//     cardTitle.textContent = menClothing.title;
+
+//     const cardText = document.createElement('p');
+//     cardText.classList.add('card-text');
+//     cardText.textContent = menClothing.category;
+
+//     cardBody.appendChild(cardTitle);
+//     cardBody.appendChild(cardText);
+
+//     const ulListGroup = document.createElement('ul');
+//     ulListGroup.classList.add('list-group');
+//     ulListGroup.classList.add('list-group-flush');
+
+//     const liListItem = document.createElement('li');
+//     liListItem.classList.add('list-group-item');
+//     liListItem.textContent = "$" + menClothing.price;
+
+//     ulListGroup.appendChild(liListItem);
+
+//     card.appendChild(image);
+//     card.appendChild(cardBody);
+//     card.appendChild(ulListGroup);
+
+//     card.addEventListener('click', () => {
+//         addEventAndRedirect(menClothing);
+//     });
+
+//     return card;
+// };
+
+// const addEventAndRedirect = (menClothing) => {
+//     window.location.href = `shopIndividual.html?id=${menClothing.id}&category=${menClothing.category}`;
+// };
 
 
 
