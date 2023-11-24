@@ -18,7 +18,7 @@ var swipere = new Swiper(".mySwiper", {
 // Fetch data from the API
 
 const request = fetch("https://dummyjson.com/users/");
-const specialistImgSet = document.querySelector(".eventSectionDesc");
+const eventSectionDesc = document.querySelector(".eventSectionDesc");
 
 // Create a swiperParams object to store the swiper settings
 const swiperParams = {
@@ -30,8 +30,8 @@ const swiperParams = {
   spaceBetween: 70, // Space between slides in px
   loop: true, // Enable loop mode
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: ".event-swiper-button-next",
+    prevEl: ".event-swiper-button-prev",
   },
   cssMode: true,
 };
@@ -52,7 +52,7 @@ request
       const a = document.createElement("a");
       const button = document.createElement("button");
       const i = document.createElement("i");
-      i.classList.add("fa-solid", "fa-book");
+      i.classList.add("fa-solid", "fa-book", "eventCardI");
       const span = document.createElement("span");
       const div2 = document.createElement("div");
       div2.classList.add("eventSectionDescSub2");
@@ -69,7 +69,13 @@ request
       div2.appendChild(a);
       div.appendChild(div2);
       // Append the swiper-slide div to the eventSectionDesc element
-      specialistImgSet.appendChild(div);
+      eventSectionDesc.appendChild(div);
+
+      button.addEventListener("click", () => {
+        window.location.href = `eventInner.html?id=${element.id}`;
+        console.log("hello event" + element.id);
+      });
+
       // Update the swiper layout after adding new slides
       swiper.update();
     });

@@ -1,3 +1,21 @@
+.quick-nav {
+    margin-left: 8%;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    padding: 20px;
+}
+
+.quick-nav a {
+    text-decoration: none;
+    color: rgb(61, 59, 59);
+    font-weight: bold;
+}
+
+.quick-nav a:hover {
+    color: rgb(59, 105, 234);
+    cursor: pointer;
+}
+
 .dine-section {
     display: flex;
     flex-wrap: wrap;
@@ -7,6 +25,7 @@
 .dine-div {
     flex: 50%;
     position: relative;
+    /* padding-top: 30px; */
 }
 
 .dine-image {

@@ -1,13 +1,13 @@
 .quick-nav {
-    display: inline;
     margin-left: 12%;
     font-size: 15px;
+    padding-top: 15px;
     font-family: 'Poppins', sans-serif;
 }
 
 .quick-nav a {
     text-decoration: none;
-    color: rgb(65, 63, 63);
+    color: rgb(61, 59, 59);
     font-weight: bold;
 }
 
@@ -26,8 +26,8 @@ a:hover {
 .court-section {
     display: flex;
     flex-wrap: wrap;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 15%;
+    margin-right: 15%;
     justify-content: space-between
 }
 
@@ -35,7 +35,8 @@ a:hover {
     display: 30%;
     height: 250px;
     padding-top: -10px;
-    margin-bottom: 20px;
+    margin-bottom: 7%;
+    background-color: rgb(243, 236, 236);
 }
 
 .court-cards:hover {
@@ -44,7 +45,7 @@ a:hover {
 
 .court-image {
     height: 180px;
-    width: 280px;
+    width: 250px;
 }
 
 .court-name {
