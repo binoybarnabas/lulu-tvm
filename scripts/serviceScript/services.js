@@ -1,3 +1,4 @@
+"use strict";
 // Fetching data from API
 
 const url = "https://dummyjson.com/users";
@@ -16,7 +17,27 @@ const getData = async (url) => {
     console.log(e);
   }
 };
-
+// const url = "https://dummyjson.com/users";
+const url = "https://mocki.io/v1/507f2920-a1e6-4006-960c-af0c1a9fd2ac";
+const getData = (url) =>
+  __awaiter(void 0, void 0, void 0, function* () {
+    try {
+      const response = yield fetch(url);
+      const data = yield response.json();
+      console.log(data);
+      if (Array.isArray(data)) {
+        data.forEach((userData) => {
+          const showData = document.querySelector(".display");
+          const serviceData = createServiceData(userData);
+          showData.appendChild(serviceData);
+        });
+      } else {
+        console.log("Data is not an array:", data);
+      }
+    } catch (e) {
+      console.log("Error fetching or parsing data:", e);
+    }
+  });
 getData(url);
 
 //Creating elements dynamically
