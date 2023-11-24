@@ -1,14 +1,13 @@
 // Fetching data from API
-// const url = "https://api.slingacademy.com/v1/sample-data/photos";
-const url = "https://mocki.io/v1/5ddf6935-5c05-4c4d-88b4-f3bf728fe2b4";
-
-const getData = async (url) => {
+async function getData() {
   try {
-    const response = await fetch(url);
+    const response = await fetch(
+      "https://mocki.io/v1/6dbcec7e-124d-458a-9e28-4b3bba8c6091"
+    );
     console.log(response);
     const data = await response.json();
     console.log(data);
-    data.photos.map((userData) => {
+    data.map((userData) => {
       showData = document.querySelector(".court-section");
       showData.classList.add("court-section");
       const courtCard = createCourtCards(userData);
@@ -17,9 +16,9 @@ const getData = async (url) => {
   } catch (error) {
     console.log(error);
   }
-};
+}
 
-getData(url);
+getData();
 
 // Creating elements dynamically and adding styles
 const createCourtCards = (userData) => {

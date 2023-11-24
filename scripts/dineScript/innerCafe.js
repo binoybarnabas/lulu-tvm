@@ -52,6 +52,7 @@ const similarCards = (data) => {
   }
 };
 
+//Function to open review form
 function openForm() {
   document.querySelector(".review-form").style.display = "block";
   document.querySelector(".web-content1").style.filter = "blur(10px)";
@@ -59,6 +60,7 @@ function openForm() {
   document.querySelector(".web-content3").style.filter = "blur(10px)";
 }
 
+//Function to close review form
 function closeForm() {
   document.querySelector(".review-form").style.display = "none";
   document.querySelector(".web-content1").style.filter = "blur(0px)";
@@ -66,6 +68,7 @@ function closeForm() {
   document.querySelector(".web-content3").style.filter = "blur(0px)";
 }
 
+//Function for form validation
 function validateForm() {
   var name = document.getElementById("name").value;
   var mail = document.getElementById("mail").value;
@@ -77,7 +80,9 @@ function validateForm() {
   } else if (!mail) {
     alert("The mail field cannot be empty...!\n\nEnter a valid mail id.");
   } else if (!rating) {
-    alert("The rating field cannot be empty...!\n\nEnter your rating betwwen 1 and 5.");
+    alert(
+      "The rating field cannot be empty...!\n\nEnter your rating betwwen 1 and 5."
+    );
   } else if (!review) {
     alert("The review field cannot be empty...!.");
   } else {
@@ -85,19 +90,20 @@ function validateForm() {
   }
 }
 
-const scriptURL = "https://script.google.com/macros/s/AKfycbxf1ip126JqhJLXlKnKz3Hcrhk10KfW-Dv_gvpQj_4lUkDmX0brLqMcSJPGHhACUoAF/exec";
- 
-  const form = document.forms["review-form"];
-   
-  form.addEventListener("submit", (e) => {
-    e.preventDefault();
-    fetch(scriptURL, { method: "POST", body: new FormData(form) })
-      .then((response) =>
-        alert("Thank you! your form is submitted successfully.")
-      )
-      .then(() => {
-        window.location.reload();
-      })
-      .catch((error) => console.error("Error!", error.message));
-  });
+//Posting data in excel form
+const scriptURL =
+  "https://script.google.com/macros/s/AKfycbxf1ip126JqhJLXlKnKz3Hcrhk10KfW-Dv_gvpQj_4lUkDmX0brLqMcSJPGHhACUoAF/exec";
 
+const form = document.forms["review-form"];
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  fetch(scriptURL, { method: "POST", body: new FormData(form) })
+    .then((response) =>
+      alert("Thank you! your form is submitted successfully.")
+    )
+    .then(() => {
+      window.location.reload();
+    })
+    .catch((error) => console.error("Error!", error.message));
+});
