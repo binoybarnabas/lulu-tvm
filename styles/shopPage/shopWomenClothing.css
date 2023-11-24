@@ -4,6 +4,30 @@ body{
     box-sizing: border-box;
 }
 
+
+.womens-clothing{
+    margin-top:20px;
+    margin-bottom:75px;
+    display: flex;
+    flex-wrap:wrap;
+    align-items:center;
+    justify-content: space-around;
+}
+
+img{
+    height:100px;
+    width:100px;
+}
+.pop-out {
+        transition: box-shadow 0.3s ease-in-out;
+      }
+.pop-out:hover {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        transform: scale(1.1);
+        transition: 0.3s ease-in-out;
+}
+
+/* 
 .womens-clothing{
     margin-top:20px;
     display: flex;
@@ -42,4 +66,4 @@ body{
     width:100%;
     height:250px;
     margin-left:60px;
-}
+} */
