@@ -1,6 +1,5 @@
 .current {
-  /* font-family: "Karla", Sans-serif; */
-  font-family: "Lucida Console", "Courier New", "monospace";
+  font-family: "Karla", Sans-serif;
   font-size: 20px;
   font-weight: bold;
   padding: 30px;
@@ -15,100 +14,56 @@ a:hover {
 }
 
 h1 {
-  /* font-family: "Karla", Sans-serif; */
-  /* font-family: "Lucida Console", "Courier New", "monospace"; */
-  font-family: "Libre Franklin", sans-serif;
-  font-size: 25px;
+  font-family: "Karla", Sans-serif;
+  font-size: 40px;
   font-weight: 500;
 }
 
 .display {
   display: flex;
   flex-wrap: wrap;
-  /* width: 90%; */
-  padding: 20px;
-  /* padding-left: 20px;
-  padding-right: 1%; */
-  justify-content: space-around;
-  background-color: rgb(255, 255, 255);
-  margin-left: 10px;
-  margin-right: 10px;
+  width: 100%;
+  justify-content: space-between;
 }
 
-/* .card {
-  position: relative;
-  width: 100px;
-  height: 100px;
-  background-color: #fff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  overflow: hidden;
-  transition: transform 0.3s ease-in-out;
-}
-.card:hover {
-  transform: scale(1.05);
-} */
 .card {
   display: flex;
-  width: 25%;
-  /* height:10%; */
-  /* border: 2px solid black; */
-  background-color: rgb(255, 255, 255);
+  width: 46%;
+  border: 2px solid black;
   margin: 10px;
-  border-radius: 20px;
-  padding: 10px;
-  padding-left: 10px;
-  margin-bottom: 50px;
-  color: rgb(0, 0, 0);
-  box-shadow: rgba(0, 0, 0, 0.10) 0px 22px 70px 4px;
-}
-.card img {
-  height: 130px;
-  width: 130px;
-  filter: brightness(100%) contrast(100%) saturate(50%) blur(0px)
-    hue-rotate(0deg);
-  padding-top: 45px;
-  /* border-radius: 5px; */
+  border-radius: 5px;
+  padding-right: 10px;
 }
 .desc {
-  /* margin-top: 30px;
-  margin-bottom: 30px; */
+  margin-top: 30px;
+  margin-bottom: 30px;
   padding-left: 30px;
   padding-top: 0px;
-  /* justify-content: space-around; */
-  /* border-left: 2px solid black; */
+  border-left: 2px solid black;
 }
 .icon {
   display: flex;
   padding-top: 0px;
 }
 .icon img {
-  height: 10px;
-  width: 10px;
+  height: 30px;
+  width: 30px;
   padding-top: 15px;
   padding-right: 10px;
 }
 .desc img {
-  height: 22px;
-  width: 22px;
+  height: 200px;
+  width: 200px;
 }
 h2 {
-  /* font-family: "Karla", Sans-serif; */
-  /* font-family: "Lucida Console", "Courier New", "monospace";
-   */
-  font-family: "Libre Franklin", sans-serif;
+  font-family: "Karla", Sans-serif;
   font-weight: lighter;
-  font-size: 16px;
+  font-size: 20px;
   letter-spacing: 1px;
-  padding-top: 1%;
-  color: rgb(18, 18, 18);
 }
 h3 {
-  /* font-family: "Karla", Sans-serif; */
-  /* font-family: "Lucida Console", "Courier New", "monospace"; */
-  font-family: "Libre Franklin", sans-serif;
+  font-family: "Karla", Sans-serif;
   font-weight: bold;
-  /* font-size: 12px; */
+  font-size: 22px;
   letter-spacing: 1px;
-  color: rgb(11, 10, 10);
 }
