@@ -29,13 +29,14 @@ a:hover {
 }
 
 #court-logo {
-    height: 200px;
-    width: 250px;
-    background-color: rgb(243, 236, 236);
+    height: 190px;
+    width: 240px;
+    background-color: white;
 }
 
 .court-details {
     flex: 3;
+    line-height: 30px;
 }
 
 .court-details h2 {
@@ -61,10 +62,13 @@ a:hover {
 }
 
 .court-about {
+    position: relative;
     line-height: 30px;
     margin-left: 10%;
     margin-right: 10%;
     margin-bottom: 50px;
+    text-align: justify;
+    z-index: 1;
 }
 
 .court-about h2 {
@@ -72,21 +76,107 @@ a:hover {
     font-size: 28px;
 }
 
+.court-cont{
+    display: flex;
+    align-items: center;
+}
+
 .court-contact {
+    flex: 3;
     margin-left: 15%;
     margin-right: 10%;
-    margin-bottom: 70px;
+    margin-bottom: 50px;
 }
 
 .court-contact p {
     font-family: "Karla", Sans-serif;
-    font-size: 14px;
+    font-size: 15px;
     line-height: 30px;
+}
+
+.review-form {
+    display: none;
+    position: absolute;
+    left: 30%;
+    top: -50%;
+    background-image: linear-gradient(50deg, rgb(217, 170, 255), rgb(251, 208, 133));
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 20px 60px 4px;
+    border-radius: 25px;
+    padding: 10px 65px 30px 65px;
+    z-index: 2;
+    font-family: 'Times New Roman', Times, serif;
+} 
+
+.form h2, button{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+}
+
+.review-form span {
+    color: rgb(191, 0, 0);  
+}
+
+label {
+    margin-bottom: 8px;
+    color: #383737;
+}
+
+.form input, textarea {
+    padding: 12px;
+    margin-bottom: 16px;
+    border: 1.5px solid #b1b1b1;
+    border-radius: 6px;
+    font-size: 14px;
+    width: 250px;
+}
+
+#rating {
+    width:30px;
+    padding: 10px;
+}
+
+.form-button {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.btn {
+    background-color: #090000;
+    color: #fff;
+    padding: 10px 28px 10px 28px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn:hover {
+    background-color: rgb(148, 76, 96);
+}
+
+.review-button{
+    flex:2;
+}
+
+#button {
+    font-size: 16px;
+    padding: 20px 40px 20px 40px;
+    margin-top: 36px;
+    border-radius: 5px;
+    background-color: rgb(20, 133, 161);
+    color: white;
+    border: none;
+}
+
+#button:hover{
+    cursor: pointer;
+    background-color: rgb(68, 189, 193);
 }
 
 .court-similar {
     background-color: #f8f8f8;
-    padding-top: 10px;
+    padding-top: 6px;
     padding-bottom: 50px;
     text-align: center;
 }
@@ -103,13 +193,16 @@ a:hover {
     margin-right: 5%;
 }
 
-.similar-image div {
-    background-color: rgb(243, 236, 236);
+.similar-img {
+    background-color: white;
+    width: 240px;
+    height: 140px;
 }
 
 .similar-image img {
-    width: 250px;
-    height: 180px;
+    width: 200px;
+    height: 100px;
+    margin-top: 20px;
 }
 
 .similar-image div:hover {
