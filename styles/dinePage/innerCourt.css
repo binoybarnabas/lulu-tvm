@@ -1,0 +1,117 @@
+.quick-nav {
+    margin-left: 12%;
+    font-size: 15px;
+    padding-top: 15px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.quick-nav a {
+    text-decoration: none;
+    color: rgb(61, 59, 59);
+    font-weight: bold;
+}
+
+a:hover {
+    color: rgb(59, 105, 234);
+    cursor: pointer;
+}
+
+.court-info {
+    display: flex;
+    margin-top: 50px;
+    margin-left: 10%;
+    margin-bottom: 50px;
+    align-items: center;
+}
+
+.court-logo {
+    flex: 2;
+}
+
+#court-logo {
+    height: 200px;
+    width: 250px;
+    background-color: rgb(243, 236, 236);
+}
+
+.court-details {
+    flex: 3;
+}
+
+.court-details h2 {
+    font-size: 22px;
+    font-family: "Karla", Sans-serif;
+    font-weight: 600;
+}
+
+.court-details span {
+    color: #42495b;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.court-image {
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.court-image img {
+    width: 100%;
+}
+
+.court-about {
+    line-height: 30px;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 50px;
+}
+
+.court-about h2 {
+    font-family: "Karla", Sans-serif;
+    font-size: 28px;
+}
+
+.court-contact {
+    margin-left: 15%;
+    margin-right: 10%;
+    margin-bottom: 70px;
+}
+
+.court-contact p {
+    font-family: "Karla", Sans-serif;
+    font-size: 14px;
+    line-height: 30px;
+}
+
+.court-similar {
+    background-color: #f8f8f8;
+    padding-top: 10px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+.similar-store {
+    font-size: 24px
+}
+
+.similar-image {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.similar-image div {
+    background-color: rgb(243, 236, 236);
+}
+
+.similar-image img {
+    width: 250px;
+    height: 180px;
+}
+
+.similar-image div:hover {
+    cursor: pointer;
+}
