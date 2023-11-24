@@ -39,8 +39,8 @@ const scriptURL = "https://script.google.com/macros/s/AKfycbxB85X5m1wM7bymjd_lIu
     fetch(scriptURL, { method: "POST", body: new FormData(form) })
       .then((response) =>
         alert("Thank you! your form is submitted successfully.")
-      )
-      .then(() => {
+        )
+        .then(() => {
         window.location.reload();
       })
       .catch((error) => console.error("Error!", error.message));
