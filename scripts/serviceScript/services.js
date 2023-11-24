@@ -1,3 +1,4 @@
+"use strict";
 // Fetching data from API
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
@@ -10,7 +11,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 // const url = "https://dummyjson.com/users";
 const url = "https://mocki.io/v1/507f2920-a1e6-4006-960c-af0c1a9fd2ac";
-const getData = (url) => __awaiter(this, void 0, void 0, function* () {
+const getData = (url) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         const response = yield fetch(url);
         const data = yield response.json();
