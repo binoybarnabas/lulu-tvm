@@ -4,19 +4,32 @@ const id = Number(urlParam.get("id"));
 console.log(typeof id);
 let filteredData;
 let url = "https://dummyjson.com/users";
+const movieApiUrl = "https://api.sampleapis.com/movies/family";
 
 const dataProcess = async (url, id) => {
   try {
     let response = await fetch(url);
     let data = await response.json();
+    let movieResponse = await fetch(movieApiUrl);
+    let movieData = await movieResponse.json();
     const newData = data.users.filter((userData) => {
       if (userData.id == id) {
         console.log(userData);
         return userData;
       }
     });
+    const newMovieData = movieData.filter((movieData) => {
+      if (movieData.id == id) {
+        return movieData;
+      }
+    });
+
+    // console.log(newMovieData[0].id);
+    // console.log(newMovieData[0].title);
+    // console.log(newMovieData[0].posterURL);
 
     const movieCard = document.querySelector(".movieCard-wrapper");
+    const quickNavMovieCard = document.querySelector(".quick-nav-movieCard");
 
     const movieCardHeading = document.createElement("div");
     movieCardHeading.classList.add("movieCardHeading");
@@ -39,14 +52,16 @@ const dataProcess = async (url, id) => {
     const releaseDateTitle = document.createElement("strong");
     const releaseDate = document.createElement("span");
 
+    quickNavMovieCard.textContent = newData[0].company.name;
+
     const movieCardImage = document.createElement("img");
-    movieCardImage.src = newData[0].image;
+    movieCardImage.src = newMovieData[0].posterURL;
 
     const br1 = document.createElement("br");
     const br2 = document.createElement("br");
     const br3 = document.createElement("br");
 
-    movieCardHeading.textContent = newData[0].company.name;
+    movieCardHeading.textContent = newMovieData[0].title;
     directorTitle.innerHTML = "DIRECTOR : ";
     director.textContent = newData[0].firstName + " " + newData[0].lastName;
     castTitle.innerHTML = "CAST : ";

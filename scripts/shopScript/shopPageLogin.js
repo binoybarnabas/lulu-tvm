@@ -14,7 +14,7 @@ const login = async()=>{
             return userData;
         }
     })
-    
+
     if(loginUser.length == 1){
         window.location.href=`shop.html`;
     }
