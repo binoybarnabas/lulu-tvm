@@ -268,16 +268,16 @@ function sendMessage() {
   input != "" && output(input);
   inputField.value = "";
 }
-document.addEventListener("DOMContentLoaded", () => {
-  const inputField = document.getElementById("input");
-  inputField.addEventListener("keydown", function (e) {
-    if (e.code === "Enter") {
-      let input = inputField.value.trim();
-      input != "" && output(input);
-      inputField.value = "";
-    }
-  });
+// document.addEventListener("DOMContentLoaded", () => {
+const inputField = document.getElementById("input");
+inputField.addEventListener("keydown", function (e) {
+  if (e.code === "Enter") {
+    let input = inputField.value.trim();
+    input != "" && output(input);
+    inputField.value = "";
+  }
 });
+// });
 
 function output(input) {
   let product;
