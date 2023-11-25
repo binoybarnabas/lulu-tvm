@@ -233,10 +233,11 @@
 
 .social-icons {
   /* display: flex; */
+  /* width: 30px; */
 }
 .social-icons a {
   color: initial;
-  padding-right: 10px;
+  /* padding-right: 10px; */
 }
 .social-icons a:hover i {
   animation-name: social-hover;
