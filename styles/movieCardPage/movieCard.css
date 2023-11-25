@@ -50,16 +50,17 @@
   flex: 1;
   margin-top: 5%;
   line-height: 35px;
+  height: 25rem;
 }
 
 .movieCardImg {
   flex: 1;
-  background-color: #f3eacedc;
+  /* background-color: #f3eacedc; */
   margin-bottom: 100px;
   border-radius: 16px;
 }
 
 .movieCardImg img {
-  height: 350px;
+  height: 25rem;
   margin-left: 13%;
 }

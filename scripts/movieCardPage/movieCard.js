@@ -1,5 +1,6 @@
 const urlParam = new URLSearchParams(window.location.search);
 
+console.log(new URLSearchParams(window.location.search).get("id"));
 const id = Number(urlParam.get("id"));
 console.log(typeof id);
 let filteredData;
@@ -18,81 +19,89 @@ const dataProcess = async (url, id) => {
         return userData;
       }
     });
+
     const newMovieData = movieData.filter((movieData) => {
       if (movieData.id == id) {
         return movieData;
       }
     });
 
-    // console.log(newMovieData[0].id);
-    // console.log(newMovieData[0].title);
-    // console.log(newMovieData[0].posterURL);
-
     const movieCard = document.querySelector(".movieCard-wrapper");
     const quickNavMovieCard = document.querySelector(".quick-nav-movieCard");
 
-    const movieCardHeading = document.createElement("div");
-    movieCardHeading.classList.add("movieCardHeading");
+    quickNavMovieCard.textContent = newMovieData[0].title;
 
-    const movieCardDetail = document.createElement("div");
-    movieCardDetail.classList.add("movieCardDetail");
-
-    const movieCardDesc = document.createElement("div");
-    movieCardDesc.classList.add("movieCardDesc");
-
-    const movieCardImg = document.createElement("div");
-    movieCardImg.classList.add("movieCardImg");
-
-    const directorTitle = document.createElement("strong");
-    const director = document.createElement("span");
-    const castTitle = document.createElement("strong");
-    const cast = document.createElement("span");
-    const synopsisTitle = document.createElement("strong");
-    const synopsis = document.createElement("span");
-    const releaseDateTitle = document.createElement("strong");
-    const releaseDate = document.createElement("span");
-
-    quickNavMovieCard.textContent = newData[0].company.name;
-
-    const movieCardImage = document.createElement("img");
+    const movieCardImage = document.querySelector(".movieCardImg-cover");
     movieCardImage.src = newMovieData[0].posterURL;
 
-    const br1 = document.createElement("br");
-    const br2 = document.createElement("br");
-    const br3 = document.createElement("br");
-
+    const movieCardHeading = document.querySelector(".movieCardHeading");
     movieCardHeading.textContent = newMovieData[0].title;
-    directorTitle.innerHTML = "DIRECTOR : ";
+
+    const director = document.querySelector(".director");
     director.textContent = newData[0].firstName + " " + newData[0].lastName;
-    castTitle.innerHTML = "CAST : ";
+
+    const cast = document.querySelector(".cast");
     cast.textContent = newData[0].maidenName;
-    synopsisTitle.textContent = "SYNOPSIS : ";
+
+    const synopsis = document.querySelector(".synopsis");
     synopsis.textContent = newData[0].userAgent;
-    releaseDateTitle.textContent = "RELEASE DATE : ";
+
+    const releaseDate = document.querySelector(".releaseDate");
     releaseDate.textContent = newData[0].birthDate;
-
-    movieCardDesc.appendChild(directorTitle);
-    movieCardDesc.appendChild(director);
-    movieCardDesc.appendChild(br1);
-    movieCardDesc.appendChild(castTitle);
-    movieCardDesc.appendChild(cast);
-    movieCardDesc.appendChild(br2);
-    movieCardDesc.appendChild(synopsisTitle);
-    movieCardDesc.appendChild(synopsis);
-    movieCardDesc.appendChild(br3);
-    movieCardDesc.appendChild(releaseDateTitle);
-    movieCardDesc.appendChild(releaseDate);
-
-    movieCardImg.appendChild(movieCardImage);
-
-    movieCardDetail.appendChild(movieCardDesc);
-    movieCardDetail.appendChild(movieCardImg);
-
-    movieCard.appendChild(movieCardHeading);
-    movieCard.appendChild(movieCardDetail);
   } catch (e) {
     console.log(e);
   }
 };
 
 dataProcess(url, id);
+
+const form = document.getElementById("contact-form");
+// form.classList.add("opacity-0");
+form.style.display = "none";
+
+function openForm() {
+  const form = document.getElementById("contact-form");
+  form.style.display = "block";
+}
+function closeForm() {
+  const form = document.getElementById("contact-form");
+  form.style.display = "none";
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("contact-form");
+
+  if (form) {
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      try {
+        const formData = new FormData(form);
+        console.log(formData);
+        const response = await fetch(
+          "https://script.google.com/macros/s/AKfycbzMwZwLFDDSWszjKfGglXzyqljx9f9RR51qpPecKb6lPyscpTCpM8ythButhtfil-Pp/exec",
+
+          {
+            method: "POST",
+            body: formData,
+          }
+        );
+
+        if (response.ok) {
+          alert("Thank you! Your form is submitted successfully.");
+          // window.location.reload();
+        } else {
+          console.error(
+            "Error! Server response:",
+            response.status,
+            response.statusText
+          );
+        }
+      } catch (error) {
+        console.error("Error!", error.message);
+      }
+    });
+  } else {
+    console.error("Form element not found");
+  }
+});
