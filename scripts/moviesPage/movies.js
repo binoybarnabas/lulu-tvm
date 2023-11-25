@@ -58,7 +58,6 @@ function processAPIData() {
                 const movieCards = document.querySelector(".movie-cardss");
                 const cardData = createCardData(userData, movieData[index]);
                 console.log(userData);
-                // console.log(movieData[index]);
                 movieCards.appendChild(cardData);
             });
         }
@@ -77,19 +76,35 @@ const createCardData = (userData, movieData) => {
     div1.style.marginLeft = "0px";
     const img = document.createElement("img");
     img.classList.add("card-img-top", "h-100");
-    // img.style.marginTop = "10px";
     const div2 = document.createElement("div");
-    div2.classList.add("card-body", "text-center");
+    const div3 = document.createElement("div");
+    div2.classList.add("card-body", "text-center", "opacity-0", "position-absolute", "top-50", "translate-middle-y");
+    div2.classList.add("h-100", "w-100");
+    div1.style.display = "flex";
+    div1.style.alignItems = "center";
+    div1.addEventListener('mouseover', () => {
+        div2.classList.add("opacity-100");
+        // div2.classList.add("show");
+    });
+    div1.addEventListener('mouseout', () => {
+        div2.classList.add("opacity-0");
+        div2.classList.remove("opacity-100");
+        // div2.classList.remove("show");
+    });
+    div2.style.backgroundColor = "rgba(0, 0, 0, 0.95)";
+    div3.style.marginTop = "90%";
+    div3.classList.add("card-text-opacity");
+    div3.style.fontFamily = 'Roboto', "sans-serif";
     const movieName = document.createElement("h5");
     movieName.classList.add("card-title");
     const directorTitle = document.createElement("p");
     directorTitle.classList.add("card-text");
-    // directorTitle.style.alignContent="center";
     img.src = movieData.posterURL;
     movieName.textContent = movieData.title;
     directorTitle.textContent = userData.firstName + " " + userData.lastName;
-    div2.appendChild(movieName);
-    div2.appendChild(directorTitle);
+    div3.appendChild(movieName);
+    div3.appendChild(directorTitle);
+    div2.appendChild(div3);
     div1.appendChild(img);
     div1.appendChild(div2);
     div.appendChild(div1);
