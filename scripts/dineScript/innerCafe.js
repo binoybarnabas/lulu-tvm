@@ -81,8 +81,10 @@ function validateForm() {
     alert("The mail field cannot be empty...!\n\nEnter a valid mail id.");
   } else if (!rating) {
     alert(
-      "The rating field cannot be empty...!\n\nEnter your rating betwwen 1 and 5."
+      "The rating field cannot be empty...!\n\nEnter your rating between 1 and 5."
     );
+  } else if (rating < 1 || rating > 5) {
+    alert("Enter your rating between 1 and 5.");
   } else if (!review) {
     alert("The review field cannot be empty...!.");
   } else {
@@ -94,7 +96,7 @@ function validateForm() {
 const scriptURL =
   "https://script.google.com/macros/s/AKfycbxf1ip126JqhJLXlKnKz3Hcrhk10KfW-Dv_gvpQj_4lUkDmX0brLqMcSJPGHhACUoAF/exec";
 
-const form = document.forms["review-form"];
+const form = document.querySelector("#form");
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
