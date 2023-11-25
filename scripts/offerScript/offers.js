@@ -1,13 +1,14 @@
 // Fetching data from API
 
-const url = "https://dummyjson.com/users";
+// const url = "https://dummyjson.com/users";
+const url = "https://mocki.io/v1/3f4629fa-d504-4c46-8514-3b490d9553e2";
 
 const getData = async (url) => {
   try {
     const response = await fetch(url);
     const data = await response.json();
     console.log(data);
-    data.users.map((userData) => {
+    data.map((userData) => {
       showData = document.querySelector(".display");
       const offerData = createOfferData(userData);
       showData.appendChild(offerData);
@@ -29,10 +30,10 @@ const createOfferData = (userData) => {
   const h2 = document.createElement("h2");
 
   //Storing values into elements
-  offerImg.src = userData.image;
-  h1.textContent = userData.firstName;
-  h3.textContent = userData.company.department;
-  h2.textContent = userData.birthDate;
+  offerImg.src = userData.url;
+  h1.textContent = userData.name;
+  h3.textContent = userData.offer;
+  h2.textContent = userData.date;
 
   //Appending element to parent elements
   offerCards.appendChild(offerImg);
