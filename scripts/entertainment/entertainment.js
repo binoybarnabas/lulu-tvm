@@ -15,6 +15,7 @@ getData(url);
 const entertainmetCards = (data) => {
   let rand1 = Math.floor(Math.random() * 9);
   let rand2 = Math.floor(Math.random() * 9);
+
   console.log(data.users[rand1].image);
   let img1 = document.getElementById("img1");
   img1.src = data.users[rand1].image;
@@ -31,6 +32,7 @@ const entertainmetCards = (data) => {
   let card2 = document.querySelector(".card2");
   card2.addEventListener("click", () => {
     // console.log("link working");
+    // console.log(rand2);
     window.location.href = `funtura.html?id=${data.users[rand2].id}`;
   });
 };

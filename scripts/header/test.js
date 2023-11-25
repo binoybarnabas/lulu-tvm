@@ -9,8 +9,7 @@ const input = () => {
   inputbutton.classList.toggle("block");
 };
 
-console.log(screen.width);
-console.log(screen.height);
+
 
 
 
