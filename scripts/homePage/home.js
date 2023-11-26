@@ -13,14 +13,11 @@ var swipere = new Swiper(".mySwiper", {
   },
 });
 
-// event card
-
-// Fetch data from the API
-
-const request = fetch("https://dummyjson.com/users/");
+const request = fetch(
+  "https://mocki.io/v1/f940fb9c-57a4-4207-9ca9-8b2bf05c313c"
+);
 const eventSectionDesc = document.querySelector(".eventSectionDesc");
 
-// Create a swiperParams object to store the swiper settings
 const swiperParams = {
   slidesPerView: 3, // Number of slides per view
   // slidersPerView: "auto",
@@ -36,30 +33,36 @@ const swiperParams = {
   cssMode: true,
 };
 
-// Initialize the swiper instance with the swiperParams object
 const swiper = new Swiper(".swiper-container", swiperParams);
 
 request
   .then((response) => response.json())
   .then((data) => {
-    data.users.forEach((element) => {
+    data.forEach((element) => {
       const div = document.createElement("div");
       div.classList.add("swiper-slide"); // Add swiper-slide class to the div element
+
       const div1 = document.createElement("div");
       div1.classList.add("eventSectionDescSub1-div");
+
       const img = document.createElement("img");
       const h3 = document.createElement("h3");
       const a = document.createElement("a");
       const button = document.createElement("button");
       const i = document.createElement("i");
+
       i.classList.add("fa-solid", "fa-book", "eventCardI");
+      i.style.color = "#4582ff";
+
       const span = document.createElement("span");
+
       const div2 = document.createElement("div");
       div2.classList.add("eventSectionDescSub2");
-      img.src = element.image; // Replace with the actual data property for image URL
-      h3.textContent = element.firstName + " " + element.lastName; // Replace with the actual data property for the specialist's name
-      span.textContent = " JOIN EVENT"; // Replace with the actual data property for the specialist's description
-      // Append the elements to the swiper-slide div
+
+      img.src = element.url;
+      h3.textContent = element.name;
+      span.textContent = " JOIN EVENT";
+
       div1.appendChild(img);
       div.appendChild(div1);
       button.appendChild(i);
