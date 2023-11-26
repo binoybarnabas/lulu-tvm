@@ -17,7 +17,9 @@ const getData = (url) => __awaiter(this, void 0, void 0, function* () {
             data.forEach((userData) => {
                 const showData = document.querySelector(".display");
                 const serviceData = createServiceData(userData);
-                showData.appendChild(serviceData);
+                if (showData) {
+                    showData.appendChild(serviceData);
+                }
             });
         }
         else {
@@ -29,7 +31,6 @@ const getData = (url) => __awaiter(this, void 0, void 0, function* () {
     }
 });
 getData(url);
-//Creating elements dynamically
 const createServiceData = (userData) => {
     const serviceCards = document.createElement("div");
     serviceCards.classList.add("card");
@@ -43,14 +44,14 @@ const createServiceData = (userData) => {
     const h1 = document.createElement("h1");
     const h2 = document.createElement("h2");
     const p = document.createElement("p");
-    //Storing values into elements
+    // Storing values into elements
     serviceImg.src = userData.url;
     h1.textContent = userData.name;
     h2.textContent = userData.no;
     p.textContent =
-        "Loren ipsum Loren ipsum Loren ipsum Loren ipsum Loren ipsum Loren ipsum Loren ipsum Loren ipsum";
+        "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum";
     phoneIcon.src = "/assets/serviceAssets/img/phone.png";
-    //Appending element to parent elements
+    // Appending element to parent elements
     icon1.appendChild(phoneIcon);
     icon1.appendChild(h2);
     serviceDesc.appendChild(h1);
