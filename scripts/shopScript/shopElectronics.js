@@ -69,7 +69,7 @@ var getData = function (url) { return __awaiter(_this, void 0, void 0, function 
 getData(url);
 var createElectronicCard = function (electronic) {
     var card = document.createElement('div');
-    card.classList.add('card', 'pop-out', 'col-lg-4', 'col-sm-12');
+    card.classList.add('card', 'pop-out', 'col-lg-6', 'col-sm-12');
     card.style.height = '450px';
     card.style.width = '300px';
     card.style.margin = '25px';
@@ -107,6 +107,62 @@ var createElectronicCard = function (electronic) {
 var addEventAndRedirect = function (electronic) {
     window.location.href = "shopIndividual.html?id=".concat(electronic.id, "&category=").concat(electronic.category);
 };
+var sessionUser = localStorage.getItem('userCache');
+if (sessionUser == null) {
+    console.log("inside userCache");
+    var dropdownContainer = document.getElementById("dropdownContainer");
+    dropdownContainer.style.display = 'none';
+}
+else {
+    var dropdownToggle = document.getElementById("dropdownToggle");
+    dropdownToggle.style.display = 'block';
+    dropdownToggle.textContent = sessionUser;
+    console.log(sessionUser);
+}
+document.addEventListener("DOMContentLoaded", function () {
+    var dropdownContainer = document.getElementById("dropdownContainer");
+    var dropdownToggle = document.getElementById("dropdownToggle");
+    var dropdownMenu = null; // Track the dropdown menu
+    // Create a function to handle the click event
+    function handleDropdownClick() {
+        var _a;
+        // If the dropdown menu exists, remove it and return
+        if (dropdownMenu) {
+            dropdownContainer.removeChild(dropdownMenu);
+            dropdownMenu = null;
+            return;
+        }
+        // Create the dropdown menu 
+        dropdownMenu = document.createElement("div");
+        dropdownMenu.classList.add("dropdown-menu", "show");
+        // Create the logout option
+        var logoutOption = document.createElement("a");
+        logoutOption.classList.add("dropdown-item");
+        logoutOption.href = "#";
+        logoutOption.textContent = "Logout";
+        logoutOption.addEventListener("click", function () {
+            // Handle the logout logic here
+            // alert("Logout clicked!");
+            $('#logoutConfirmationModal').modal('show');
+        });
+        // Add click event listener to confirm logout button in the modal
+        (_a = document.getElementById('confirmLogoutBtn')) === null || _a === void 0 ? void 0 : _a.addEventListener('click', function () {
+            // Handle the logout logic here
+            // Redirect to home.html
+            // Replace "yourCookieName" with the actual name of your cookie
+            document.cookie = "sessionUser=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+            localStorage.removeItem('userCache');
+            console.log("cookie removed : " + document.cookie);
+            window.location.href = '../../pages/shopPage/shopPageLogin.html';
+        });
+        // Append the logout option to the dropdown menu
+        dropdownMenu.appendChild(logoutOption);
+        // Append the dropdown menu to the container
+        dropdownContainer.appendChild(dropdownMenu);
+    }
+    // Add the click event listener to the container
+    dropdownToggle.addEventListener("click", handleDropdownClick);
+});
 // let url = 'https://fakestoreapi.com/products/category/electronics';
 // let cardsPerRow = 3;
 // const getData = async (url) => {
