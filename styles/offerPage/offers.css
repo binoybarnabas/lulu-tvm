@@ -16,7 +16,7 @@ a:hover {
 h1 {
   font-family: "Karla", Sans-serif;
   font-size: 40px;
-  font-weight: 500;
+  /* font-weight: 500px; */
   padding: 30px;
 }
 
