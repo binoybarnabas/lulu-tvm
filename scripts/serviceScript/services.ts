@@ -49,8 +49,7 @@ const createServiceData = (userData: UserData): HTMLDivElement => {
   serviceImg.src = userData.url;
   h1.textContent = userData.name;
   h2.textContent = userData.no;
-  p.textContent =
-    "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum";
+  p.textContent = userData.desc;
   phoneIcon.src = "/assets/serviceAssets/img/phone.png";
 
   // Appending element to parent elements
