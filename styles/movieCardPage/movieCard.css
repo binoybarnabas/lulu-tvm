@@ -64,3 +64,32 @@
   height: 25rem;
   margin-left: 13%;
 }
+
+/* comments */
+.commentRate {
+  color: orange;
+}
+
+.mainComment {
+  border: 1px solid #9699a0;
+  border-radius: 10px;
+  background-color: rgba(250, 249, 249, 0.87);
+  height: 100%;
+}
+
+/* .message {
+  max-width: 50ch;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+} */
+
+.message {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  max-width: 50ch;
+  text-overflow: ellipsis;
+  white-space: normal;
+}
