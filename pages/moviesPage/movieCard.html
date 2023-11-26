@@ -13,14 +13,7 @@
       href="https://fonts.googleapis.com/css2?family=Karla:wght@700&family=Lora:wght@600&family=Roboto:wght@400;500&display=swap"
       rel="stylesheet"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Karla&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
     <link
       href="https://fonts.googleapis.com/css2?family=Karla&display=swap"
       rel="stylesheet"
@@ -35,18 +28,13 @@
     <link rel="stylesheet" href="/styles/movieCardPage/movieCardComment.css" />
     <script src="/scripts/header/test.js"></script>
 
-    <!--  -->
     <!-- Bootstrap CSS -->
     <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
     />
 
-    <!-- Owl Carousel CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
-    />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
@@ -59,6 +47,24 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
     <!-- Owl Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <!-- Include jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <!-- Include Owl Carousel CSS and JS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    />
+    <!-- Font Awesome Icon Library -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
     <style>
@@ -151,7 +157,7 @@
               onclick="openForm()"
               class="btn btn-lg"
             >
-              Book ticket
+              Rate Movie
             </button>
           </div>
           <div class="movieCardImg">
@@ -163,15 +169,7 @@
         <div
           class="d-flex flex-row-reverse"
           style="margin-bottom: 100px; margin-right: 200px"
-        >
-          <!-- <button
-            type="button"
-            style="background-color: #c8102e; color: white"
-            class="btn btn-lg"
-          >
-            Book ticket
-          </button> -->
-        </div>
+        ></div>
       </div>
 
       <!--  -->
@@ -278,39 +276,8 @@
         </form>
       </div>
 
-      <div class="container">
-        <div class="owl-carousel">
-          <div class="item">
-            <img
-              src="https://mdbcdn.b-cdn.net/img/new/slides/041.webp"
-              alt="Los Angeles"
-            />
-          </div>
-          <div class="item">
-            <img
-              src="https://mdbcdn.b-cdn.net/img/new/slides/042.webp"
-              alt="Chicago"
-            />
-          </div>
-          <div class="item">
-            <img
-              src="https://mdbcdn.b-cdn.net/img/new/slides/043.webp"
-              alt="New York"
-            />
-          </div>
-          <div class="item">
-            <img
-              src="https://mdbcdn.b-cdn.net/img/new/slides/044.webp"
-              alt="New York"
-            />
-          </div>
-          <div class="item">
-            <img
-              src="https://mdbcdn.b-cdn.net/img/new/slides/045.webp"
-              alt="New York"
-            />
-          </div>
-        </div>
+      <div class="container mb-5">
+        <div class="owl-carousel"></div>
       </div>
     </section>
 
@@ -412,7 +379,6 @@
     src="https://kit.fontawesome.com/ac8eb70719.js"
     crossorigin="anonymous"
   ></script>
-  <script src="/scripts/header/test.js"></script>
 
   <!--  -->
 
@@ -438,7 +404,8 @@
           },
         },
         autoplay: true,
-        autoplayTimeout: 1200,
+        autoplayTimeout: 5000,
+        autoplaySpeed: 20000,
         autoplayHoverPause: true,
       });
     });
