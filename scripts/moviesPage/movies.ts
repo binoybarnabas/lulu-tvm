@@ -88,13 +88,13 @@ const createCardData = (userData: UserData,movieData: MovieData): HTMLElement =>
 div1.style.alignItems = "center";
 
 div1.addEventListener('mouseover', () => {
-  div2.classList.add("opacity-100");
+  div2.classList.add("opacity-75");
   // div2.classList.add("show");
 });
 
 div1.addEventListener('mouseout', () => {
   div2.classList.add("opacity-0");
-  div2.classList.remove("opacity-100");
+  div2.classList.remove("opacity-75");
   // div2.classList.remove("show");
 });
 
