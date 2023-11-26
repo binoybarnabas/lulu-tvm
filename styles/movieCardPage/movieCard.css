@@ -1,3 +1,7 @@
+.nav-bar a {
+  font-size: 1.5rem;
+}
+
 /* quick-nav  style  */
 
 .quick-nav {
@@ -11,7 +15,7 @@
   color: #42495b;
   font-family: "Poppins", sans-serif;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 1.5rem;
 }
 
 .quick-nav a:hover {
@@ -23,7 +27,7 @@
   color: #42495b;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 1.5rem;
 }
 
 /* movie card  */
@@ -36,13 +40,14 @@
 }
 
 .movieCardHeading {
-  font-size: 32px;
+  font-size: 3.25rem;
   font-weight: bold;
   margin-bottom: 3%;
 }
 
 .movieCardDetail {
   display: flex;
+  font-size: 1.75rem;
 }
 
 .movieCardDesc {
@@ -83,6 +88,9 @@
   text-overflow: ellipsis;
   white-space: nowrap;
 } */
+.item {
+  font-size: 1.3rem;
+}
 
 .message {
   display: -webkit-box;
@@ -92,4 +100,10 @@
   max-width: 50ch;
   text-overflow: ellipsis;
   white-space: normal;
+}
+
+/* form styles */
+
+.form {
+  font-size: 1.4rem;
 }

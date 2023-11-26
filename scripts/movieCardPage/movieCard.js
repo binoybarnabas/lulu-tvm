@@ -56,7 +56,6 @@ const dataProcess = async (url, id) => {
 dataProcess(url, id);
 
 const form = document.getElementById("contact-form");
-// form.classList.add("opacity-0");
 form.style.display = "none";
 
 function openForm() {
@@ -67,40 +66,6 @@ function closeForm() {
   const form = document.getElementById("contact-form");
   form.style.display = "none";
 }
-
-// document.addEventListener("DOMContentLoaded", function () {
-//   // const form = document.getElementById("contact-form");
-//   // if (form) {
-//   //   form.addEventListener("submit", async (e) => {
-//   //     e.preventDefault();
-//   //     try {
-//   //       const formData = new FormData(form);
-//   //       console.log(formData);
-//   //       const response = await fetch(
-//   //         "https://script.google.com/macros/s/AKfycbzMwZwLFDDSWszjKfGglXzyqljx9f9RR51qpPecKb6lPyscpTCpM8ythButhtfil-Pp/exec",
-//   //         {
-//   //           method: "POST",
-//   //           body: formData,
-//   //         }
-//   //       );
-//   //       if (response.ok) {
-//   //         alert("Thank you! Your form is submitted successfully.");
-//   //         // window.location.reload();
-//   //       } else {
-//   //         console.error(
-//   //           "Error! Server response:",
-//   //           response.status,
-//   //           response.statusText
-//   //         );
-//   //       }
-//   //     } catch (error) {
-//   //       console.error("Error!", error.message);
-//   //     }
-//   //   });
-//   // } else {
-//   //   console.error("Form element not found");
-//   // }
-// });
 
 // comment section
 
@@ -229,7 +194,7 @@ document.addEventListener("DOMContentLoaded", function () {
         mainComment.appendChild(comment);
         // Initialize Owl Carousel
         const owl = $(".owl-carousel").owlCarousel({
-          items: 3, // Set the number of items you want to display initially
+          items: 3,
           loop: true,
           margin: 10,
         });
