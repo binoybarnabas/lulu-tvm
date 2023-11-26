@@ -25,7 +25,6 @@ const getData = async (url: string): Promise<void> => {
                 jewelerySection.appendChild(currentRow);
             }
         }
-
         const jeweleryCard = createJeweleryCard(jewelery);
         if (currentRow) {
             currentRow.appendChild(jeweleryCard);
