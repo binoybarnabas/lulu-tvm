@@ -20,6 +20,7 @@ const entertainmetCards = (data) => {
   let img1 = document.getElementById("img1");
   img1.src = data.users[rand1].image;
   let card1 = document.querySelector(".card1");
+  document.querySelector("#card1").textContent = data.users[rand1].company.name 
   card1.addEventListener("click", () => {
     // console.log("link working");
     window.location.href = `funtura.html?id=${data.users[rand1].id}`;
@@ -30,6 +31,7 @@ const entertainmetCards = (data) => {
   img2.style.backgroundColor = "blue";
   img2.src = data.users[rand2].image;
   let card2 = document.querySelector(".card2");
+  document.querySelector("#card2").textContent = data.users[rand2].company.name 
   card2.addEventListener("click", () => {
     // console.log("link working");
     // console.log(rand2);

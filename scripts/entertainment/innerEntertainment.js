@@ -15,6 +15,8 @@ const idSearch = async (url, id) => {
     });
     console.log(newData);
     let img = document.querySelector(".funtura img");
+    let funtura =  document.querySelector("#funtura")
+    funtura.textContent =  newData[0].company.name
     img.src = newData[0].image;
   } catch (e) {
     console.log(e);
