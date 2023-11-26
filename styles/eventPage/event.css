@@ -61,6 +61,7 @@ p {
 
 .icon {
   display: flex;
+  padding: 7px;
 }
 .calender-icon img {
   height: 30px;
