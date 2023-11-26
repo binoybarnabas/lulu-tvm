@@ -79,6 +79,7 @@ var createWomenClothingCard = function (womenClothing) {
     card.style.height = '450px';
     card.style.width = '300px';
     card.style.marginLeft = '25px';
+    card.style.marginBottom = '25px';
     var image = document.createElement('img');
     image.classList.add('img-fluid', 'card-img-top');
     image.style.height = '200px';
