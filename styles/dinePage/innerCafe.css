@@ -1,0 +1,235 @@
+.quick-nav {
+    margin-left: 12%;
+    font-size: 15px;
+    margin-top: 15px;
+}
+
+.quick-nav a {
+    text-decoration: none;
+    color: #17252A;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+a:hover {
+    color: rgb(59, 105, 234);
+    cursor: pointer;
+}
+
+.cafe-info {
+    display: flex;
+    margin-top: 50px;
+    margin-left: 10%;
+    margin-bottom: 50px;
+    align-items: center;
+}
+
+.cafe-logo {
+    flex: 2;
+}
+
+#cafe-logo {
+    height: 160px;
+    width: 230px;
+    background-color: white;
+}
+
+.cafe-details {
+    flex: 3;
+    line-height: 25px;
+}
+
+.cafe-details h2 {
+    font-size: 22px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 600;
+}
+
+.cafe-details p {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.cafe-details span {
+    color: #42495b;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.cafe-image {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.cafe-image img {
+    width: 100%;
+}
+
+.cafe-about {
+    position: relative;
+    line-height: 30px;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 40px;
+    text-align: justify;
+    z-index: 1;
+}
+
+.cafe-about h2 {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.cafe-cont{
+    display: flex;
+    align-items: center;
+}
+
+.cafe-contact {
+    flex: 3;
+    margin-top: 20px;
+    margin-left: 15%;
+    margin-right: 10%;
+    margin-bottom: 50px;
+}
+
+.cafe-description {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.cafe-contact p {
+    font-family: "Karla", Sans-serif;
+    font-size: 15px;
+    line-height: 30px;
+}
+
+.review-form {
+    display: none;
+    position: absolute;
+    left: 30%;
+    top: -50%;
+    background-image: linear-gradient(45deg, skyblue, pink);
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 20px 60px 4px;
+    border-radius: 25px;
+    padding: 10px 65px 30px 65px;
+    z-index: 2;
+    font-family: 'Times New Roman', Times, serif;
+} 
+
+#form h3, button{
+    font-family:'Times New Roman', Times, serif;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.review-form span {
+    color: rgb(191, 0, 0);  
+}
+
+label {
+    margin-bottom: 0px;
+    color: #383737;
+}
+
+#name, #mail, #rating{
+    padding: 4px;
+    margin-bottom: 16px;
+    width: 280px;
+    border: 1.5px solid #b1b1b1;
+    border-radius: 6px;
+    font-size: 14px;
+    width: 250px;
+}
+
+#rating {
+    width:55px;
+}
+
+#review {
+    padding: 6px;
+    width: 250px;
+    height: 85px;
+    border: 1.5px solid #b1b1b1;
+    border-radius: 6px;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+#form-button {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+#submit, #cancel {
+    background-color: #090000;
+    color: #fff;
+    padding: 7px 20px 7px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#submit:hover,#cancel:hover {
+    background-color: rgb(148, 76, 96);
+}
+
+.review-button{
+    flex:2;
+}
+
+#button {
+    font-size: 18px;
+    padding: 20px 35px 20px 35px;
+    border-radius: 5px;
+    background-color: rgb(20, 133, 161);
+    color: white;
+    border: none;
+}
+
+#button:hover{
+    cursor: pointer;
+    background-color: rgb(68, 189, 193);
+}
+
+.cafe-similar {
+    background-color: #f8f8f8;
+    padding-top: 6px;
+    padding-bottom: 50px; 
+    text-align: center;
+}
+
+.similar-store {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bolder;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+.similar-image {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.similar-img {
+    background-color: white;
+    width: 240px;
+    height: 140px;
+}
+
+.similar-img img {
+    width: 200px;
+    height: 100px;
+    margin-top: 20px;
+}
+
+.similar-image div:hover {
+    cursor: pointer;
+}

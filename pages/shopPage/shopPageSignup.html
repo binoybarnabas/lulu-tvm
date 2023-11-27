@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../styles/shopPage/shopSignUp.css">
+</head>
+<body>
+
+    <div class="container">
+        <div id="loadingSpinner" class="spinner-border text-success" role="status" style="display: none;">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+
+        <div class="title">Sign up!</div>
+        <div class="content"> 
+          <form action="#" name="signUpData" id="signUpData">
+            <div class="user-details">
+              <div class="input-box">
+                <span class="details">Full Name</span>
+                <input type="text" placeholder="Enter your name" id="fname" name="fname">
+              </div>
+              <div class="input-box">
+                <span class="details">Username</span>
+                <input type="text" placeholder="Enter your username" id="username" name="username">
+              </div>
+              <div class="input-box">
+                <span class="details">Email</span>
+                <input type="email" placeholder="Enter your email" id="email" name="email">
+              </div>
+              <div class="input-box">
+                <span class="details">Phone Number</span>
+                <input type="number" placeholder="Enter your number" id="phno" name="phno">
+              </div>
+              <div class="input-box">
+                <span class="details">Password</span>
+                <input type="text" placeholder="Enter your password" id="password" name="password">
+              </div>
+              <div class="input-box">
+                <span class="details">Confirm Password</span>
+                <input type="text" placeholder="Confirm your password" id="password-confirm" name="password-confirm">
+              </div>
+            </div>
+            <div class="gender-details">
+              <input type="radio" name="gender" id="dot-1" value="male">
+              <input type="radio" name="gender" id="dot-2"  value="female">
+              <input type="radio" name="gender" id="dot-3"  value="prefer not to say">
+              <span class="gender-title">Gender</span>
+              <div class="category">
+                <label for="dot-1">
+                <span class="dot one"></span>
+                <span class="gender" id="male">Male</span>
+              </label>
+              <label for="dot-2">
+                <span class="dot two"></span>
+                <span class="gender" id="female">Female</span>
+              </label>
+              <label for="dot-3">
+                <span class="dot three"></span>
+                <span class="gender" id="preference">Prefer not to say</span>
+                </label>
+              </div>
+            </div>
+            <div class="button">
+              <button type="submit" onClick="signUp()" id="sign-up-button">Sign up!</button>
+            </div>
+          </form>
+          <span class="details">
+            <a href="shopPageLogin.html">already have an account? click here to sign in.</a>
+          </span>
+          <span class="details">
+            <a href="shop.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Login as a guest.</a>
+          </span>
+        </div>
+      </div>
+
+
+    
+    <script src="../../scripts/shopScript/shopSignUp.js"></script>
+</body>
+</html>
+
+<!-- https://docs.google.com/spreadsheets/d/1WZZ4VthyV-JWGF6vmnwAH3qBJu1L9sbdU3_CWq5RcU0/edit#gid=0 -->

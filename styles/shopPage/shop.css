@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+body{
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+
+  .pop-out:hover {
+    transform: scale(1.1);
+    transition: 0.3s ease-in-out;
+  }
+
+.shop-home{
+    display:flex;
+    flex-wrap:wrap;
+    height:600px;
+    width:100%;
+}
+.image{
+    background-image:url('http://www.thiruvananthapuram.lulumall.in/wp-content/uploads/2022/03/this-is-same-shoes-1-1.jpg');
+    flex-basis: 50%;
+    position:relative;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.image h1, .image h3{
+    color:#ff006e;
+}
+
+.shop-list{
+    flex-basis: 50%;
+    padding-top:150px;
+}
+
+.fashion-heading{
+    position:absolute;
+    top:350px;
+    left:70px;
+}
+
+.category{
+    margin-left:100px;
+    margin-bottom:20px;
+    cursor: pointer;
+    color: #ff006e;
+}
+
+.category-heading{
+    margin-left:200px;
+}
