@@ -1,23 +1,5 @@
-// const url: string = "https://dummyjson.com/users";
-// const movieApiUrl: string = "https://api.sampleapis.com/movies/family";
 
 import {UserData,MovieData} from "../moviesPage/moviesType"
-
-// type UserData = {
-//   id: number;
-//   firstName: string;
-//   lastName: string;
-//   maidenName: string;
-//   userAgent: string;
-//   birthDate: string;
-//   image:string;
-// };
-
-// type MovieData = {
-//   id: number;
-//   title: string;
-//   posterURL: string;
-// };
 
 // Async function fetching data from an API
 async function fetchDataFromAPI(): Promise<any> {
@@ -42,7 +24,7 @@ async function fetchDataFromAPI(): Promise<any> {
     return { data, movieData };
   } catch (error) {
     console.error('Error fetching data:', error);
-    throw error; // Rethrow the error to handle it elsewhere if needed
+    throw error;
   }
 }
 
@@ -123,56 +105,6 @@ div1.addEventListener('mouseout', () => {
  div1.appendChild(img);
  div1.appendChild(div2);
   div.appendChild(div1);
-
-  // const div1 = document.createElement("div");
-  // div1.classList.add("movie-cards-img");
-  // const img = document.createElement("img");
-  // // img.src = userData.image;
-  // img.src = movieData.posterURL;
-
-  // const div2 = document.createElement("div");
-  // div2.classList.add("movie-cards-desc");
-  // const movieName = document.createElement("h2");
-  // const directorTitle = document.createElement("strong");
-  // const director = document.createElement("span");
-  // const castTitle = document.createElement("strong");
-  // const cast = document.createElement("span");
-  // const synopsisTitle = document.createElement("strong");
-  // const synopsis = document.createElement("span");
-  // const releaseDateTitle = document.createElement("strong");
-  // const releaseDate = document.createElement("span");
-
-  // const br1 = document.createElement("br");
-  // const br2 = document.createElement("br");
-  // const br3 = document.createElement("br");
-
-  // movieName.textContent =movieData.title;
-  // directorTitle.innerHTML = "DIRECTOR : ";
-  // director.textContent = userData.firstName + " " + userData.lastName + userData.id;
-  // castTitle.innerHTML = "CAST : ";
-  // cast.textContent = userData.maidenName;
-  // synopsisTitle.textContent = "SYNOPSIS : ";
-  // synopsis.textContent = userData.userAgent;
-  // releaseDateTitle.textContent = "RELEASE DATE : ";
-  // releaseDate.textContent = userData.birthDate;
-
-  // div1.appendChild(img);
-
-  // div2.appendChild(movieName);
-  // div2.appendChild(directorTitle);
-  // div2.appendChild(director);
-  // div2.appendChild(br1);
-  // div2.appendChild(castTitle);
-  // div2.appendChild(cast);
-  // div2.appendChild(br2);
-  // div2.appendChild(synopsisTitle);
-  // div2.appendChild(synopsis);
-  // div2.appendChild(br3);
-  // div2.appendChild(releaseDateTitle);
-  // div2.appendChild(releaseDate);
-
-  // div.appendChild(div1);
-  // div.appendChild(div2);
 
   div.addEventListener("click", () => {
     openNewPage(userData);
