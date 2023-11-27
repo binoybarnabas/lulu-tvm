@@ -44,6 +44,7 @@ h1 {
   width: 500px;
 }
 .offer-info {
+  padding-top: 50px;
   flex: 3;
 }
 h2 {
