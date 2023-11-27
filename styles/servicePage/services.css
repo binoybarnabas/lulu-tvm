@@ -1,5 +1,4 @@
 .current {
-  /* font-family: "Karla", Sans-serif; */
   font-family: "Lucida Console", "Courier New", "monospace";
   font-size: 20px;
   font-weight: bold;
@@ -7,8 +6,6 @@
 }
 
 h1 {
-  /* font-family: "Karla", Sans-serif; */
-  /* font-family: "Lucida Console", "Courier New", "monospace"; */
   font-family: "Libre Franklin", sans-serif;
   font-size: 25px;
   font-weight: 500;
@@ -17,34 +14,16 @@ h1 {
 .display {
   display: flex;
   flex-wrap: wrap;
-  /* width: 90%; */
   padding: 20px;
-  /* padding-left: 20px;
-  padding-right: 1%; */
   justify-content: space-around;
   background-color: rgb(255, 255, 255);
   margin-left: 10px;
   margin-right: 10px;
 }
 
-/* .card {
-  position: relative;
-  width: 100px;
-  height: 100px;
-  background-color: #fff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  overflow: hidden;
-  transition: transform 0.3s ease-in-out;
-}
-.card:hover {
-  transform: scale(1.05);
-} */
 .card {
   display: flex;
   width: 25%;
-  /* height:10%; */
-  /* border: 2px solid black; */
   background-color: rgb(255, 255, 255);
   margin: 10px;
   border-radius: 20px;
@@ -61,15 +40,10 @@ h1 {
     hue-rotate(0deg);
   padding-top: 45px;
   padding-left: 120px;
-  /* border-radius: 5px; */
 }
 .desc {
-  /* margin-top: 30px;
-  margin-bottom: 30px; */
   padding-left: 30px;
   padding-top: 20px;
-  /* justify-content: space-around; */
-  /* border-left: 2px solid black; */
 }
 .icon {
   display: flex;
@@ -87,9 +61,6 @@ h1 {
   width: 32px;
 }
 h2 {
-  /* font-family: "Karla", Sans-serif; */
-  /* font-family: "Lucida Console", "Courier New", "monospace";
-   */
   font-family: "Libre Franklin", sans-serif;
   font-weight: lighter;
   font-size: 16px;
@@ -98,11 +69,8 @@ h2 {
   color: rgb(18, 18, 18);
 }
 h3 {
-  /* font-family: "Karla", Sans-serif; */
-  /* font-family: "Lucida Console", "Courier New", "monospace"; */
   font-family: "Libre Franklin", sans-serif;
   font-weight: bold;
-  /* font-size: 12px; */
   letter-spacing: 1px;
   color: rgb(11, 10, 10);
 }
