@@ -64,43 +64,48 @@ function openForm() {
 }
 function closeForm() {
   const form = document.getElementById("contact-form");
+
   form.style.display = "none";
 }
 
 // comment section
 
 document.addEventListener("DOMContentLoaded", function () {
-  //
-
   const form = document.getElementById("contact-form");
 
   if (form) {
     form.addEventListener("submit", async (e) => {
       e.preventDefault();
 
-      try {
-        const formData = new FormData(form);
-        console.log(formData);
-        const response = await fetch(
-          "https://script.google.com/macros/s/AKfycbzMwZwLFDDSWszjKfGglXzyqljx9f9RR51qpPecKb6lPyscpTCpM8ythButhtfil-Pp/exec",
+      if (form.checkValidity()) {
+        try {
+          const formData = new FormData(form);
+          console.log(formData);
+          const response = await fetch(
+            "https://script.google.com/macros/s/AKfycbzMwZwLFDDSWszjKfGglXzyqljx9f9RR51qpPecKb6lPyscpTCpM8ythButhtfil-Pp/exec",
 
-          {
-            method: "POST",
-            body: formData,
-          }
-        );
-
-        if (response.ok) {
-          alert("Thank you! Your form is submitted successfully.");
-        } else {
-          console.error(
-            "Error! Server response:",
-            response.status,
-            response.statusText
+            {
+              method: "POST",
+              body: formData,
+            }
           );
+
+          if (response.ok) {
+            alert("Thank you! Your form is submitted successfully.");
+            window.location.reload();
+          } else {
+            console.error(
+              "Error! Server response:",
+              response.status,
+              response.statusText
+            );
+          }
+        } catch (error) {
+          console.error("Error!", error.message);
         }
-      } catch (error) {
-        console.error("Error!", error.message);
+      } else {
+        form.classList.add("was-validated");
+        form.style.display = "block";
       }
     });
   } else {
@@ -108,6 +113,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   //
+
   const apiKey = "AIzaSyB707vyZZowzYL0VqeLfa91uwwS_3NY6cg";
   const spreadsheetId = "1XwXgUR1sq12NFfHRskJv8-ADmAlGLJnuGf9cfEbUpPI";
   const sheetName = "Sheet1";
@@ -212,4 +218,13 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
   const data = fetchDataFromAPI();
+});
+
+const ratingInputs = document.querySelectorAll('input[name="rating"]');
+const ratingHiddenInput = document.getElementById("rating-hidden");
+
+ratingInputs.forEach((input) => {
+  input.addEventListener("change", function () {
+    ratingHiddenInput.value = this.value;
+  });
 });
