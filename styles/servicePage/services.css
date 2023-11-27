@@ -1,69 +1,76 @@
 .current {
-  font-family: "Karla", Sans-serif;
+  font-family: "Lucida Console", "Courier New", "monospace";
   font-size: 20px;
   font-weight: bold;
   padding: 30px;
 }
 
-.current a {
-  color: black;
-  text-decoration: none;
-}
-a:hover {
-  color: #007bff;
-}
-
 h1 {
-  font-family: "Karla", Sans-serif;
-  font-size: 40px;
+  font-family: "Libre Franklin", sans-serif;
+  font-size: 25px;
   font-weight: 500;
 }
 
 .display {
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
-  justify-content: space-between;
+  padding: 20px;
+  justify-content: space-around;
+  background-color: rgb(255, 255, 255);
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .card {
   display: flex;
-  width: 46%;
-  border: 2px solid black;
+  width: 25%;
+  background-color: rgb(255, 255, 255);
   margin: 10px;
-  border-radius: 5px;
-  padding-right: 10px;
+  border-radius: 20px;
+  padding: 10px;
+  padding-left: 10px;
+  margin-bottom: 50px;
+  color: rgb(0, 0, 0);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 22px 70px 4px;
+}
+.card img {
+  height: 130px;
+  width: 230px;
+  filter: brightness(100%) contrast(100%) saturate(50%) blur(0px)
+    hue-rotate(0deg);
+  padding-top: 45px;
+  padding-left: 120px;
 }
 .desc {
-  margin-top: 30px;
-  margin-bottom: 30px;
   padding-left: 30px;
-  padding-top: 0px;
-  border-left: 2px solid black;
+  padding-top: 20px;
 }
 .icon {
   display: flex;
   padding-top: 0px;
 }
 .icon img {
-  height: 30px;
-  width: 30px;
-  padding-top: 15px;
+  height: 20px;
+  width: 20px;
+  padding-top: 4px;
+  padding-left: 0%;
   padding-right: 10px;
 }
 .desc img {
-  height: 200px;
-  width: 200px;
+  height: 32px;
+  width: 32px;
 }
 h2 {
-  font-family: "Karla", Sans-serif;
+  font-family: "Libre Franklin", sans-serif;
   font-weight: lighter;
-  font-size: 20px;
+  font-size: 16px;
   letter-spacing: 1px;
+  padding-top: 1%;
+  color: rgb(18, 18, 18);
 }
 h3 {
-  font-family: "Karla", Sans-serif;
+  font-family: "Libre Franklin", sans-serif;
   font-weight: bold;
-  font-size: 22px;
   letter-spacing: 1px;
+  color: rgb(11, 10, 10);
 }

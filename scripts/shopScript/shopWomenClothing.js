@@ -38,7 +38,7 @@ var _this = this;
 var url = 'https://fakestoreapi.com/products/';
 var cardsPerRow = 3;
 var getData = function (url) { return __awaiter(_this, void 0, void 0, function () {
-    var response, data, womensClothingSection, currentRow;
+    var response, data, womensClothingSection, currentRow, womensClothingData;
     return __generator(this, function (_a) {
         switch (_a.label) {
             case 0: return [4 /*yield*/, fetch(url)];
@@ -49,23 +49,25 @@ var getData = function (url) { return __awaiter(_this, void 0, void 0, function 
                 data = _a.sent();
                 console.log(data);
                 womensClothingSection = document.querySelector('.womens-clothing');
-                // console.log(data);
                 womensClothingData = data.filter(function (womensClothing) {
-                    if (womensClothing.category == 'women\'s clothing') {
+                    if (womensClothing.category === 'women\'s clothing') {
                         return womensClothing;
                     }
                 });
                 womensClothingData.forEach(function (womenClothing, index) {
                     if (index % cardsPerRow === 0) {
-                        // Start a new row
                         currentRow = document.createElement('div');
                         currentRow.classList.add('row');
-                        womensClothingSection.appendChild(currentRow);
+                        if (womensClothingSection) {
+                            womensClothingSection.appendChild(currentRow);
+                        }
                     }
                     var womenClothingCard = createWomenClothingCard(womenClothing);
-                    currentRow.appendChild(womenClothingCard);
+                    if (currentRow) {
+                        currentRow.appendChild(womenClothingCard);
+                    }
                 });
-                console.log(womenClothingData);
+                console.log(womensClothingData);
                 return [2 /*return*/];
         }
     });
@@ -73,14 +75,14 @@ var getData = function (url) { return __awaiter(_this, void 0, void 0, function 
 getData(url);
 var createWomenClothingCard = function (womenClothing) {
     var card = document.createElement('div');
-    card.classList.add('card', 'pop-out', 'col-lg-4', 'col-sm-12');
+    card.classList.add('card', 'pop-out', 'col-sm-12');
     card.style.height = '450px';
     card.style.width = '300px';
-    card.style.margin = '25px';
+    card.style.marginLeft = '25px';
+    card.style.marginBottom = '25px';
     var image = document.createElement('img');
     image.classList.add('img-fluid', 'card-img-top');
     image.style.height = '200px';
-    // Use object-fit to control the aspect ratio of the image
     image.style.objectFit = 'contain';
     image.src = womenClothing.image;
     var cardBody = document.createElement('div');
@@ -111,6 +113,126 @@ var createWomenClothingCard = function (womenClothing) {
 var addEventAndRedirect = function (womenClothing) {
     window.location.href = "shopIndividual.html?id=".concat(womenClothing.id, "&category=").concat(womenClothing.category);
 };
+var sessionUser = localStorage.getItem('userCache');
+if (sessionUser == null) {
+    console.log("inside userCache");
+    var dropdownContainer = document.getElementById("dropdownContainer");
+    dropdownContainer.style.display = 'none';
+}
+else {
+    var dropdownToggle = document.getElementById("dropdownToggle");
+    dropdownToggle.style.display = 'block';
+    dropdownToggle.textContent = sessionUser;
+    console.log(sessionUser);
+}
+document.addEventListener("DOMContentLoaded", function () {
+    var dropdownContainer = document.getElementById("dropdownContainer");
+    var dropdownToggle = document.getElementById("dropdownToggle");
+    var dropdownMenu = null; // Track the dropdown menu
+    // Create a function to handle the click event
+    function handleDropdownClick() {
+        var _a;
+        // If the dropdown menu exists, remove it and return
+        if (dropdownMenu) {
+            dropdownContainer.removeChild(dropdownMenu);
+            dropdownMenu = null;
+            return;
+        }
+        // Create the dropdown menu 
+        dropdownMenu = document.createElement("div");
+        dropdownMenu.classList.add("dropdown-menu", "show");
+        // Create the logout option
+        var logoutOption = document.createElement("a");
+        logoutOption.classList.add("dropdown-item");
+        logoutOption.href = "#";
+        logoutOption.textContent = "Logout";
+        logoutOption.addEventListener("click", function () {
+            // Handle the logout logic here
+            // alert("Logout clicked!");
+            $('#logoutConfirmationModal').modal('show');
+        });
+        // Add click event listener to confirm logout button in the modal
+        (_a = document.getElementById('confirmLogoutBtn')) === null || _a === void 0 ? void 0 : _a.addEventListener('click', function () {
+            // Handle the logout logic here
+            // Redirect to home.html
+            // Replace "yourCookieName" with the actual name of your cookie
+            document.cookie = "sessionUser=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+            localStorage.removeItem('userCache');
+            console.log("cookie removed : " + document.cookie);
+            window.location.href = '../../pages/shopPage/shopPageLogin.html';
+        });
+        // Append the logout option to the dropdown menu
+        dropdownMenu.appendChild(logoutOption);
+        // Append the dropdown menu to the container
+        dropdownContainer.appendChild(dropdownMenu);
+    }
+    // Add the click event listener to the container
+    dropdownToggle.addEventListener("click", handleDropdownClick);
+});
+// let url = 'https://fakestoreapi.com/products/';
+// let cardsPerRow = 3;
+// const getData = async(url)=>{
+// const response = await fetch(url);
+// const data = await response.json();
+// console.log(data);
+// const womensClothingSection = document.querySelector('.womens-clothing');
+// let currentRow;
+// womensClothingData = data.filter((womensClothing)=>{
+//     if(womensClothing.category == 'women\'s clothing'){
+//        return womensClothing
+//     }
+// });
+// womensClothingData.forEach((womenClothing, index) => {
+//     if (index % cardsPerRow === 0) {
+//         currentRow = document.createElement('div');
+//         currentRow.classList.add('row');
+//         womensClothingSection.appendChild(currentRow);
+//     }
+//     const womenClothingCard = createWomenClothingCard(womenClothing);
+//     currentRow.appendChild(womenClothingCard);
+// });
+// console.log(womenClothingData);
+// };
+// getData(url);
+// const createWomenClothingCard = (womenClothing) => {
+//     const card = document.createElement('div');
+//     card.classList.add('card','pop-out','col-lg-4','col-sm-12');
+//     card.style.height = '450px'; 
+//     card.style.width = '300px';
+//     card.style.margin = '25px';
+//     const image = document.createElement('img');    
+//     image.classList.add('img-fluid','card-img-top');
+//     image.style.height = '200px';
+//     image.style.objectFit = 'contain';
+//     image.src = womenClothing.image;
+//     const cardBody = document.createElement('div');
+//     cardBody.classList.add('card-body');
+//     const cardTitle = document.createElement('h5');
+//     cardTitle.classList.add('card-title');
+//     cardTitle.textContent = womenClothing.title;
+//     const cardText = document.createElement('p');
+//     cardText.classList.add('card-text');
+//     cardText.textContent = womenClothing.category;
+//     cardBody.appendChild(cardTitle);
+//     cardBody.appendChild(cardText);
+//     const ulListGroup = document.createElement('ul');
+//     ulListGroup.classList.add('list-group');
+//     ulListGroup.classList.add('list-group-flush');
+//     const liListItem = document.createElement('li');
+//     liListItem.classList.add('list-group-item');
+//     liListItem.textContent = "$" + womenClothing.price;
+//     ulListGroup.appendChild(liListItem);
+//     card.appendChild(image);
+//     card.appendChild(cardBody);
+//     card.appendChild(ulListGroup);
+//     card.addEventListener('click', () => {
+//         addEventAndRedirect(womenClothing);
+//     });
+//     return card;
+// };
+// const addEventAndRedirect = (womenClothing) => {
+//     window.location.href = `shopIndividual.html?id=${womenClothing.id}&category=${womenClothing.category}`;
+// };
 // let url = 'https://fakestoreapi.com/products/';
 // const getData = async(url)=>{
 // const response = await fetch(url);

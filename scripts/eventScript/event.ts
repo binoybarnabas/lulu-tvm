@@ -1,6 +1,3 @@
-// Fetching data from API
-
-// const url = "https://dummyjson.com/users";
 
 const url = "https://mocki.io/v1/f940fb9c-57a4-4207-9ca9-8b2bf05c313c";
 

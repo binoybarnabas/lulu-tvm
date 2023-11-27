@@ -1,5 +1,6 @@
 const urlParam = new URLSearchParams(window.location.search);
 
+console.log(new URLSearchParams(window.location.search).get("id"));
 const id = Number(urlParam.get("id"));
 console.log(typeof id);
 let filteredData;
@@ -18,81 +19,212 @@ const dataProcess = async (url, id) => {
         return userData;
       }
     });
+
     const newMovieData = movieData.filter((movieData) => {
       if (movieData.id == id) {
         return movieData;
       }
     });
 
-    // console.log(newMovieData[0].id);
-    // console.log(newMovieData[0].title);
-    // console.log(newMovieData[0].posterURL);
-
     const movieCard = document.querySelector(".movieCard-wrapper");
     const quickNavMovieCard = document.querySelector(".quick-nav-movieCard");
 
-    const movieCardHeading = document.createElement("div");
-    movieCardHeading.classList.add("movieCardHeading");
+    quickNavMovieCard.textContent = newMovieData[0].title;
 
-    const movieCardDetail = document.createElement("div");
-    movieCardDetail.classList.add("movieCardDetail");
-
-    const movieCardDesc = document.createElement("div");
-    movieCardDesc.classList.add("movieCardDesc");
-
-    const movieCardImg = document.createElement("div");
-    movieCardImg.classList.add("movieCardImg");
-
-    const directorTitle = document.createElement("strong");
-    const director = document.createElement("span");
-    const castTitle = document.createElement("strong");
-    const cast = document.createElement("span");
-    const synopsisTitle = document.createElement("strong");
-    const synopsis = document.createElement("span");
-    const releaseDateTitle = document.createElement("strong");
-    const releaseDate = document.createElement("span");
-
-    quickNavMovieCard.textContent = newData[0].company.name;
-
-    const movieCardImage = document.createElement("img");
+    const movieCardImage = document.querySelector(".movieCardImg-cover");
     movieCardImage.src = newMovieData[0].posterURL;
 
-    const br1 = document.createElement("br");
-    const br2 = document.createElement("br");
-    const br3 = document.createElement("br");
-
+    const movieCardHeading = document.querySelector(".movieCardHeading");
     movieCardHeading.textContent = newMovieData[0].title;
-    directorTitle.innerHTML = "DIRECTOR : ";
+
+    const director = document.querySelector(".director");
     director.textContent = newData[0].firstName + " " + newData[0].lastName;
-    castTitle.innerHTML = "CAST : ";
+
+    const cast = document.querySelector(".cast");
     cast.textContent = newData[0].maidenName;
-    synopsisTitle.textContent = "SYNOPSIS : ";
+
+    const synopsis = document.querySelector(".synopsis");
     synopsis.textContent = newData[0].userAgent;
-    releaseDateTitle.textContent = "RELEASE DATE : ";
+
+    const releaseDate = document.querySelector(".releaseDate");
     releaseDate.textContent = newData[0].birthDate;
-
-    movieCardDesc.appendChild(directorTitle);
-    movieCardDesc.appendChild(director);
-    movieCardDesc.appendChild(br1);
-    movieCardDesc.appendChild(castTitle);
-    movieCardDesc.appendChild(cast);
-    movieCardDesc.appendChild(br2);
-    movieCardDesc.appendChild(synopsisTitle);
-    movieCardDesc.appendChild(synopsis);
-    movieCardDesc.appendChild(br3);
-    movieCardDesc.appendChild(releaseDateTitle);
-    movieCardDesc.appendChild(releaseDate);
-
-    movieCardImg.appendChild(movieCardImage);
-
-    movieCardDetail.appendChild(movieCardDesc);
-    movieCardDetail.appendChild(movieCardImg);
-
-    movieCard.appendChild(movieCardHeading);
-    movieCard.appendChild(movieCardDetail);
   } catch (e) {
     console.log(e);
   }
 };
 
 dataProcess(url, id);
+
+const form = document.getElementById("contact-form");
+form.style.display = "none";
+
+function openForm() {
+  const form = document.getElementById("contact-form");
+  form.style.display = "block";
+}
+function closeForm() {
+  const form = document.getElementById("contact-form");
+
+  form.style.display = "none";
+}
+
+// comment section
+
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("contact-form");
+
+  if (form) {
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      if (form.checkValidity()) {
+        try {
+          const formData = new FormData(form);
+          console.log(formData);
+          const response = await fetch(
+            "https://script.google.com/macros/s/AKfycbzMwZwLFDDSWszjKfGglXzyqljx9f9RR51qpPecKb6lPyscpTCpM8ythButhtfil-Pp/exec",
+
+            {
+              method: "POST",
+              body: formData,
+            }
+          );
+
+          if (response.ok) {
+            alert("Thank you! Your form is submitted successfully.");
+            window.location.reload();
+          } else {
+            console.error(
+              "Error! Server response:",
+              response.status,
+              response.statusText
+            );
+          }
+        } catch (error) {
+          console.error("Error!", error.message);
+        }
+      } else {
+        form.classList.add("was-validated");
+        form.style.display = "block";
+      }
+    });
+  } else {
+    console.error("Form element not found");
+  }
+
+  //
+
+  const apiKey = "AIzaSyB707vyZZowzYL0VqeLfa91uwwS_3NY6cg";
+  const spreadsheetId = "1XwXgUR1sq12NFfHRskJv8-ADmAlGLJnuGf9cfEbUpPI";
+  const sheetName = "Sheet1";
+
+  async function fetchDataFromAPI() {
+    const apiUrl = `https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${sheetName}?key=${apiKey}`;
+    console.log(apiUrl);
+
+    try {
+      const response = await fetch(apiUrl);
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+      const data = await response.json();
+
+      data.values.slice(1).forEach((row) => {
+        globalThis.mainComment = document.createElement("div");
+
+        mainComment.classList.add("item", "mainComment");
+
+        const comment = document.createElement("div");
+        comment.style.margin = "10px";
+
+        const name = document.createElement("h4");
+        const email = document.createElement("p");
+        const message = document.createElement("p");
+        const rate = document.createElement("div");
+
+        message.classList.add("text-center", "message");
+        email.classList.add("text-end");
+
+        const rate1 = document.createElement("span");
+        const rate2 = document.createElement("span");
+        const rate3 = document.createElement("span");
+        const rate4 = document.createElement("span");
+        const rate5 = document.createElement("span");
+
+        rate1.classList.add("fa", "fa-star");
+        rate2.classList.add("fa", "fa-star");
+        rate3.classList.add("fa", "fa-star");
+        rate4.classList.add("fa", "fa-star");
+        rate5.classList.add("fa", "fa-star");
+
+        name.textContent = row[0];
+
+        console.log(name.textContent);
+        email.textContent = row[1];
+        message.textContent = ' " ' + row[2] + ' " ';
+
+        let rateCount = 1;
+        while (rateCount <= row[3]) {
+          switch (rateCount) {
+            case 1:
+              rate1.classList.add("commentRate");
+              break;
+            case 2:
+              rate2.classList.add("commentRate");
+              break;
+            case 3:
+              rate3.classList.add("commentRate");
+              break;
+            case 4:
+              rate4.classList.add("commentRate");
+              break;
+            case 5:
+              rate5.classList.add("commentRate");
+              break;
+          }
+          rateCount++;
+        }
+
+        rate.appendChild(rate1);
+        rate.appendChild(rate2);
+        rate.appendChild(rate3);
+        rate.appendChild(rate4);
+        rate.appendChild(rate5);
+
+        comment.appendChild(rate);
+        comment.appendChild(name);
+        comment.appendChild(message);
+        comment.appendChild(email);
+
+        mainComment.appendChild(comment);
+        // Initialize Owl Carousel
+        const owl = $(".owl-carousel").owlCarousel({
+          items: 3,
+          loop: true,
+          margin: 10,
+        });
+
+        owl.trigger("add.owl.carousel", [mainComment]);
+
+        // Update the carousel
+        owl.trigger("refresh.owl.carousel");
+      });
+
+      return { data };
+    } catch (error) {
+      console.error("Error fetching data:", error);
+      throw error;
+    }
+  }
+  const data = fetchDataFromAPI();
+});
+
+const ratingInputs = document.querySelectorAll('input[name="rating"]');
+const ratingHiddenInput = document.getElementById("rating-hidden");
+
+ratingInputs.forEach((input) => {
+  input.addEventListener("change", function () {
+    ratingHiddenInput.value = this.value;
+  });
+});

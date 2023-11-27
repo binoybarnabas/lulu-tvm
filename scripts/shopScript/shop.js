@@ -68,6 +68,7 @@ var getData = function () { return __awaiter(_this, void 0, void 0, function () 
     });
 }); };
 getData();
+console.log(document.cookie);
 var createCategory = function (category) {
     var h2 = document.createElement('h2');
     h2.classList.add('category', 'pop-out');
@@ -87,3 +88,59 @@ var openCategory = function (category) {
     else
         window.location.href = "shopWomenClothing.html?path=".concat(category);
 };
+var sessionUser = localStorage.getItem('userCache');
+if (sessionUser == null) {
+    console.log("inside userCache");
+    var dropdownContainer = document.getElementById("dropdownContainer");
+    dropdownContainer.style.display = 'none';
+}
+else {
+    var dropdownToggle = document.getElementById("dropdownToggle");
+    dropdownToggle.style.display = 'block';
+    dropdownToggle.textContent = sessionUser;
+    console.log(sessionUser);
+}
+document.addEventListener("DOMContentLoaded", function () {
+    var dropdownContainer = document.getElementById("dropdownContainer");
+    var dropdownToggle = document.getElementById("dropdownToggle");
+    var dropdownMenu = null; // Track the dropdown menu
+    // Create a function to handle the click event
+    function handleDropdownClick() {
+        var _a;
+        // If the dropdown menu exists, remove it and return
+        if (dropdownMenu) {
+            dropdownContainer.removeChild(dropdownMenu);
+            dropdownMenu = null;
+            return;
+        }
+        // Create the dropdown menu 
+        dropdownMenu = document.createElement("div");
+        dropdownMenu.classList.add("dropdown-menu", "show");
+        // Create the logout option
+        var logoutOption = document.createElement("a");
+        logoutOption.classList.add("dropdown-item");
+        logoutOption.href = "#";
+        logoutOption.textContent = "Logout";
+        logoutOption.addEventListener("click", function () {
+            // Handle the logout logic here
+            // alert("Logout clicked!");
+            $('#logoutConfirmationModal').modal('show');
+        });
+        // Add click event listener to confirm logout button in the modal
+        (_a = document.getElementById('confirmLogoutBtn')) === null || _a === void 0 ? void 0 : _a.addEventListener('click', function () {
+            // Handle the logout logic here
+            // Redirect to home.html
+            // Replace "yourCookieName" with the actual name of your cookie
+            document.cookie = "sessionUser=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+            localStorage.removeItem('userCache');
+            console.log("cookie removed : " + document.cookie);
+            window.location.href = '../../pages/shopPage/shopPageLogin.html';
+        });
+        // Append the logout option to the dropdown menu
+        dropdownMenu.appendChild(logoutOption);
+        // Append the dropdown menu to the container
+        dropdownContainer.appendChild(dropdownMenu);
+    }
+    // Add the click event listener to the container
+    dropdownToggle.addEventListener("click", handleDropdownClick);
+});

@@ -36,6 +36,9 @@
 .movie-section-intro {
   width: 100%;
 }
+.fontres {
+  size: 8rem;
+}
 
 .movie-wrapper {
   display: flex;
@@ -54,11 +57,11 @@
 
 .movie-wrapper-left h2 {
   font-weight: 600;
-  font-size: 35px;
+  font-size: 1.5rem;
 }
 
 .movie-wrapper-left p {
-  font-size: 14px;
+  font-size: 1rem;
   font-weight: normal;
   line-height: 32px;
   color: #333333;
@@ -74,14 +77,14 @@
 .movie-wrapper-right h3 {
   font-weight: bolder;
   line-height: 32px;
-  font-size: 14px;
+  font-size: 1.5rem;
   color: #333333;
   margin-left: 3%;
 }
 
 .movie-wrapper-right p {
   line-height: 32px;
-  font-size: 14px;
+  font-size: 1rem;
   color: #333333;
   margin-left: 3%;
 }
@@ -122,4 +125,28 @@
 
 .movie-cards-desc {
   margin-top: 0;
+}
+
+/* .card-text-opacity {
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  -moz-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+} */
+.card-text-opacity h5 {
+  color: white;
+  opacity: 100%;
+  font-size: 1.75rem;
+}
+.card-text-opacity p {
+  color: white;
+  opacity: 100%;
+  font-size: 1.5rem;
+}
+
+.card:hover {
+  transition: all 48.3s ease-in-out 18s;
+  background-color: red;
 }

@@ -285,6 +285,9 @@ body {
   color: #fea116;
   border: 1px solid #fea116;
   background-color: #fff;
+  .eventSectionHeading2 i {
+    color: #fea116;
+  }
 }
 
 .eventSectionHeading h1 {
