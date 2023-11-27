@@ -57,3 +57,45 @@
   text-align: center;
   font-size: 28px;
 }
+
+.court-section {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 13%;
+  margin-right: 13%;
+  justify-content: space-around;
+}
+
+.court-cards {
+  display: 40%;
+  /* height: 200px; */
+  width: 350px;
+  margin-bottom: 7%;
+  color: black;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 30px 90px;
+  border-radius: 15px;
+  text-align: center;
+  transition: transform 0.35s ease-out;
+}
+
+.court-cards:hover {
+  /* border: 2px solid; */
+  transform: scale(.93); 
+}
+
+.court-image {
+  /* height: 110px; */
+  width: 200px;
+  margin-top: 25px;
+}
+
+.court-name {
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+.cards{
+  margin-top: 5%;
+}

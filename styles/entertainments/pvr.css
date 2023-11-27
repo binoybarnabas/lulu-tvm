@@ -1,3 +1,101 @@
-.about p{
-    line-height: 50px;
+.funtura {
+  display: flex;
+  padding-left: 150px;
+}
+.funtura-discription h3 {
+  font-family: "Karla", sans-serif;
+  font-weight: 600;
+  font-size: 22px;
+}
+.funtura-discription p {
+  font-family: "Karla", sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  color: #333333;
+}
+.funtura-discription{
+  margin-top: 3%;
+}
+
+.about h2 {
+  font-family: "Karla", Sans-serif;
+  font-weight: 600;
+  font-size: 28px;
+}
+
+.about{
+  margin-top: 5%;
+    width: 80%;
+  margin-left: 10%;
+}
+.about p {
+  font-family: "Karla", Sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #333333;
+}
+
+.imageandaddressflex {
+  display: flex;
+  justify-content: space-around;
+  font-family: "Karla", Sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #333333;
+}
+
+.similarstores {
+  justify-content: center;
+  /* align-items: center; */
+  display: flex;
+  background-color: #f8f8f8;
+  
+}
+.similarstores h3{
+  font-family: "Lora";
+  font-weight: 600;
+  text-align: center;
+  font-size: 28px;
+}
+
+.court-section {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 13%;
+  margin-right: 13%;
+  justify-content: space-around;
+}
+
+.court-cards {
+  display: 40%;
+  /* height: 200px; */
+  width: 350px;
+  margin-bottom: 7%;
+  color: black;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 30px 90px;
+  border-radius: 15px;
+  text-align: center;
+  transition: transform 0.35s ease-out;
+}
+
+.court-cards:hover {
+  /* border: 2px solid; */
+  transform: scale(.93); 
+}
+
+.court-image {
+  /* height: 110px; */
+  width: 200px;
+  margin-top: 25px;
+}
+
+.court-name {
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+.cards{
+  margin-top: 5%;
 }
