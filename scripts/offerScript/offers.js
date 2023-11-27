@@ -1,6 +1,4 @@
-// Fetching data from API
 
-// const url = "https://dummyjson.com/users";
 const url = "https://mocki.io/v1/3f4629fa-d504-4c46-8514-3b490d9553e2";
 
 const getData = async (url) => {

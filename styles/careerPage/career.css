@@ -7,7 +7,6 @@
   font-family: "Poppins", sans-serif;
 }
 body {
-  /* display: flex; */
   margin-bottom: 20px;
   align-items: center;
   justify-content: center;
@@ -37,7 +36,7 @@ body {
     #56d8e4,
     #9f01ea
   );
-  /* -webkit-background-clip: text; */
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .container form {
